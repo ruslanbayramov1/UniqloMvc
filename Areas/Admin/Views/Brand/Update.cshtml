@@ -1,0 +1,23 @@
+﻿@model BrandUpdateVM
+@{
+    ViewData["Title"] = "Update Brand";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="@Model.Name"></label>
+        <input class="form-control" asp-for="@Model.Name" value="@ViewBag.Brand.Name">
+        <span class="text-danger" asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="form-group">
+        <label>Logo</label><br />
+        <img width="150px" src="~/imgs/brands/@ViewBag.Brand.LogoUrl" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Logo">New logo</label>
+        <input class="form-control" asp-for="@Model.Logo">
+        <span class="text-danger" asp-validation-for="@Model.Logo"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

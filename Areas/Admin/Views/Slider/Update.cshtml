@@ -1,0 +1,35 @@
+﻿@model SliderUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="@Model.Title"></label>
+        <input class="form-control" asp-for="@Model.Title" value="@ViewBag.Slider.Title">
+        <span class="text-danger" asp-validation-for="@Model.Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Subtitle"></label>
+        <input class="form-control" asp-for="@Model.Subtitle" value="@ViewBag.Slider.Subtitle">
+        <span class="text-danger" asp-validation-for="@Model.Subtitle"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Link"></label>
+        <input class="form-control" asp-for="@Model.Link" value="@ViewBag.Slider.Link">
+        <span class="text-danger" asp-validation-for="@Model.Link"></span>
+    </div>
+    <div>
+        <label>Old Image</label>
+        <div>
+            <img width="150px" src="~/imgs/sliders/@ViewBag.Slider.ImageUrl" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.File">New image</label>
+        <input class="form-control" asp-for="@Model.File">
+        <span class="text-danger" asp-validation-for="@Model.File"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

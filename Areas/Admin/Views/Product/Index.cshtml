@@ -1,0 +1,50 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="card shadow mb-4">
+    <div style="display:flex; justify-content: space-between" class="card-header py-3">
+        <h6 style="align-self:center" class="m-0 font-weight-bold text-primary">Products Table</h6>
+        <div>
+            <a class="btn btn-primary" asp-controller="Product" asp-action="Create">Create</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Brand</th>
+                        <th>Description</th>
+                        <th>CostPrice</th>
+                        <th>SellPrice</th>
+                        <th>Discount</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.Id</td>
+                            <td>@data.Name</td>
+                            <td><img width="100px" src="~/imgs/products/@data.CoverImage" /></td>
+                            <td>@(data.Brand != null ? data.Brand.Name : "No Brand")</td>
+                            <td>@data.Description</td>
+                            <td>@data.CostPrice</td>
+                            <td>@data.SellPrice</td>
+                            <td>@data.Discount%</td>
+                            <td><a class="btn btn-success" href="/Admin/Product/Update/@data.Id">Update</a></td>
+                            <td><a class="btn btn-danger" href="/Admin/Product/Delete/@data.Id">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

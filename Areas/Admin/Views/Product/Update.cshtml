@@ -1,0 +1,59 @@
+﻿@model ProductUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input class="form-control" value="@ViewBag.Product.Name" asp-for="Name">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input class="form-control" height="40px" value="@ViewBag.Product.Description" asp-for="Description" />
+                <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <div style="display:flex; flex-direction: column" class="form-group">
+                <label>Old image</label>
+                <img width="100px" src="~/imgs/products/@ViewBag.Product.CoverImage" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="File">New Image</label>
+                <input class="form-control" asp-for="File">
+                <span class="text-danger" asp-validation-for="File"></span>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="CostPrice"></label>
+                    <input class="form-control" value="@ViewBag.Product.CostPrice" asp-for="CostPrice">
+                    <span class="text-danger" asp-validation-for="CostPrice"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="SellPrice"></label>
+                    <input class="form-control" value="@ViewBag.Product.SellPrice" asp-for="SellPrice">
+                    <span class="text-danger" asp-validation-for="SellPrice"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="Discount"></label>
+                    <input class="form-control" value="@ViewBag.Product.Discount" asp-for="Discount">
+                    <span class="text-danger" asp-validation-for="Discount"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label asp-for="Quantity"></label>
+                    <input class="form-control" value="@ViewBag.Product.Quantity" asp-for="Quantity">
+                    <span class="text-danger" asp-validation-for="Quantity"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="BrandId">Brands</label>
+                    <select class="form-control" asp-for="BrandId" asp-items='new SelectList(ViewBag.Brands,"Id","Name")'>
+                        <option disabled selected>Select brand</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="BrandId"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
