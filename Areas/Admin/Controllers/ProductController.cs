@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using UniqloMvc.Constants;
 using UniqloMvc.DataAccess;
 using UniqloMvc.Extensions;
 using UniqloMvc.Models;
@@ -24,14 +25,27 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
     [HttpPost]
     public async Task<IActionResult> Create(ProductCreateVM vm)
     {
-        
         if (vm.File != null)
         {
             if (!vm.File.IsValidType("image"))
                 ModelState.AddModelError("File", "File type must be an image");
 
             else if (!vm.File.IsValidSize(2 * 1024))
-                ModelState.AddModelError("File", "File type must be less than 2mb");
+                ModelState.AddModelError("File", "File size must be less than 2mb");
+        }
+
+        if (vm.OtherFiles != null && vm.OtherFiles.Any())
+        {
+            if (!vm.OtherFiles.All(x => x.IsValidType("image")))
+            {
+                List<string> fileNames = vm.OtherFiles.Where(x => !x.IsValidType(ContentType.ImageType)).Select(x => x.FileName).ToList();
+                ModelState.AddModelError("OtherFiles", $"Invalid type of files: {String.Join(", ", fileNames)}. Must be an image");
+            }
+            if (!vm.OtherFiles.All(x => x.IsValidSize(ContentType.ImageSize)))
+            {
+                List<string> fileNames = vm.OtherFiles.Where(x => !x.IsValidSize(ContentType.ImageSize)).Select(x => x.FileName).ToList();
+                ModelState.AddModelError("OtherFiles", $"Invalid size of files: {String.Join(", ", fileNames)}. Must be less than 2mb");
+            }
         }
 
         if (!ModelState.IsValid)
@@ -61,6 +75,16 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
             product.CoverImage = newFileName;
         }
 
+        if (vm.OtherFiles != null)
+        { 
+            string filePath = Path.Combine(_env.WebRootPath, "imgs", "products");
+            product.Images = vm.OtherFiles.Select(x => new ProductImage
+            {
+                Product = product,
+                ImageUrl = x.Upload(filePath).Result,
+            }).ToList(); 
+        }
+
         await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
 
@@ -69,7 +93,7 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
 
     public async Task<IActionResult> Update(int? id)
     {
-        Product? product = await _context.Products.Where(brand => brand.IsDeleted == false).FirstOrDefaultAsync(prod => prod.Id == id);
+        Product? product = await _context.Products.Where(prod => prod.IsDeleted == false).Include(prod => prod.Images).FirstOrDefaultAsync(prod => prod.Id == id);
         if (product == null) return NotFound();
 
         ViewBag.Brands = await _context.Brands.Where(brand => brand.IsDeleted == false).ToListAsync();
@@ -92,8 +116,23 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
                 ModelState.AddModelError("File", "File must be less than 2mb");
         }
 
+        if (vm.OtherFiles != null && vm.OtherFiles.Any())
+        {
+            if (!vm.OtherFiles.All(x => x.IsValidType("image")))
+            {
+                List<string> fileNames = vm.OtherFiles.Where(x => !x.IsValidType(ContentType.ImageType)).Select(x => x.FileName).ToList();
+                ModelState.AddModelError("OtherFiles", $"Invalid type of files: {String.Join(", ", fileNames)}. Must be an image");
+            }
+            if (!vm.OtherFiles.All(x => x.IsValidSize(ContentType.ImageSize)))
+            {
+                List<string> fileNames = vm.OtherFiles.Where(x => !x.IsValidSize(ContentType.ImageSize)).Select(x => x.FileName).ToList();
+                ModelState.AddModelError("OtherFiles", $"Invalid size of files: {String.Join(", ", fileNames)}. Must be less than 2mb");
+            }
+        }
+
         ViewBag.Brands = await _context.Brands.Where(brand => brand.IsDeleted == false).ToListAsync();
-        ViewBag.Product = await _context.Products.Where(brand => brand.IsDeleted == false).FirstOrDefaultAsync(prod => prod.Id == id);
+        ViewBag.Product = await _context.Products.Where(prod => prod.IsDeleted == false).FirstOrDefaultAsync(prod => prod.Id == id);
+
         if (!ModelState.IsValid)
         {
             return View(vm);
@@ -104,6 +143,16 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
             string filePath = Path.Combine(_env.WebRootPath, "imgs", "products");
             string newFileName = vm.File!.Upload(filePath).Result;
             product.CoverImage = newFileName;
+        }
+
+        if (vm.OtherFiles != null && vm.OtherFiles.Any())
+        {
+            string filePath = Path.Combine(_env.WebRootPath, "imgs", "products");
+            product.Images = vm.OtherFiles.Select(x => new ProductImage
+            {
+                Product = product,
+                ImageUrl = x.Upload(filePath).Result,
+            }).ToList();
         }
 
         product.Name = vm.Name;
@@ -126,6 +175,7 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
         if (product == null) return NotFound();
 
         product.IsDeleted = true;
+        await _context.ProductImages.Where(x => x.ProductId == id).ForEachAsync(x => x.IsDeleted = true);
         await _context.SaveChangesAsync();
 
         return RedirectToAction(nameof(Index));

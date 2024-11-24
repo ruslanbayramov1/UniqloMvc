@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AB108\\home-tasks\\UniqloMvc\\UniqloMvc.csproj": {}
+    "C:\\AB108\\my-apps\\UniqloMvc\\UniqloMvc.csproj": {}
   },
   "projects": {
-    "C:\\AB108\\home-tasks\\UniqloMvc\\UniqloMvc.csproj": {
+    "C:\\AB108\\my-apps\\UniqloMvc\\UniqloMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AB108\\home-tasks\\UniqloMvc\\UniqloMvc.csproj",
+        "projectUniqueName": "C:\\AB108\\my-apps\\UniqloMvc\\UniqloMvc.csproj",
         "projectName": "UniqloMvc",
-        "projectPath": "C:\\AB108\\home-tasks\\UniqloMvc\\UniqloMvc.csproj",
+        "projectPath": "C:\\AB108\\my-apps\\UniqloMvc\\UniqloMvc.csproj",
         "packagesPath": "C:\\Users\\rusba\\.nuget\\packages\\",
-        "outputPath": "C:\\AB108\\home-tasks\\UniqloMvc\\obj\\",
+        "outputPath": "C:\\AB108\\my-apps\\UniqloMvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

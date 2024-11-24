@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UiiXopON9yc=",
+  "dgSpecHash": "8V1l3DB3D2g=",
   "success": true,
-  "projectFilePath": "C:\\AB108\\home-tasks\\UniqloMvc\\UniqloMvc.csproj",
+  "projectFilePath": "C:\\AB108\\my-apps\\UniqloMvc\\UniqloMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rusba\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\rusba\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

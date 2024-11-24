@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniqloMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32b6bb86ed184eff90d7cb7d255768f9db2d8a31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dc76dfe97c248a3e83abbb70a5c580bab8a97c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("UniqloMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UniqloMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

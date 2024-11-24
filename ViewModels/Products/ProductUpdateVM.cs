@@ -24,4 +24,5 @@ public class ProductUpdateVM
 
     public int? BrandId { get; set; }
     public IFormFile? File { get; set; }
+    public ICollection<IFormFile>? OtherFiles { get; set; }
 }
