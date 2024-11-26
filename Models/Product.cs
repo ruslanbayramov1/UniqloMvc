@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UniqloMvc.ViewModels.Products;
 
 namespace UniqloMvc.Models;
 

@@ -3,40 +3,60 @@
     ViewData["Title"] = "Update";
 }
 
-        <form method="post" enctype="multipart/form-data">
+@section style {
+    <style>
+        .del-img-label {
+            position: relative;
+        }
+
+            .del-img-label:before {
+                content: '';
+                width: 80px;
+                height: 80px;
+                position: absolute;
+            }
+
+        .del-img-input:checked + .del-img-label:before {
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Product Create</h6>
+    </div>
+    <div class="card-body">
+        <form id="main" asp-action="Update" asp-controller="Product" asp-area="Admin" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label asp-for="Name"></label>
-                <input class="form-control" value="@ViewBag.Product.Name" asp-for="Name">
+                <input class="form-control" asp-for="Name">
                 <span class="text-danger" asp-validation-for="Name"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description"></label>
-                <input class="form-control" height="40px" value="@ViewBag.Product.Description" asp-for="Description" />
+                <textarea class="form-control" asp-for="Description"></textarea>
                 <span class="text-danger" asp-validation-for="Description"></span>
             </div>
-            <div class="form-row">
-                <div style="display:flex; flex-direction: column; margin-right: 2rem" class="form-group">
-                    <label>Old Cover image</label>
-                    <img width="100px" src="~/imgs/products/@ViewBag.Product.CoverImage" />
+            <div class="form-group">
+                <div class="d-flex">
+                    <img width="80px" src="~/imgs/products/@Model.FileUrl" />
                 </div>
-                <div style="display:flex; flex-direction: column">
-                    <label>Other Images</label> 
-                    <div class="form-row">
-                        @foreach (var data in ViewBag.Product.Images) 
-                        { 
-                            <img style="margin-left: 8px" width="100px" src="~/imgs/products/@data.ImageUrl" /> 
-                        }
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col">
-                    <label asp-for="File">New Cover Image</label>
+                <div>
+                    <label asp-for="File"></label>
                     <input class="form-control" accept="image/*" asp-for="File">
                     <span class="text-danger" asp-validation-for="File"></span>
                 </div>
-                <div class="col">
-                    <label asp-for="File">New Other Images</label>
+            </div>
+            <div class="form-group">
+                <div id="side" asp-action="DeleteImgs" asp-controller="Product" method="post" class="col">
+                    @foreach (var data in Model.OtherFilesUrls ?? [])
+                    {
+                        <input class="d-none del-img-input" type="checkbox" value="@data" name="imgNames" id="@data" />
+                        <label class="del-img-label" for="@data"><img width="80px" src="~/imgs/products/@data" /></label>
+                    }
+                    <button onclick="$('#side').submit()" asp-action="DeleteImgs" asp-controller="Product" asp-route-id="@Model.Id" type="submit"></button>
+                    <label asp-for="OtherFiles"></label>
                     <input class="form-control" accept="image/*" asp-for="OtherFiles">
                     <span class="text-danger" asp-validation-for="OtherFiles"></span>
                 </div>
@@ -44,24 +64,24 @@
             <div class="form-row">
                 <div class="col">
                     <label asp-for="CostPrice"></label>
-                    <input class="form-control" value="@ViewBag.Product.CostPrice" asp-for="CostPrice">
+                    <input class="form-control" asp-for="CostPrice">
                     <span class="text-danger" asp-validation-for="CostPrice"></span>
                 </div>
                 <div class="col">
                     <label asp-for="SellPrice"></label>
-                    <input class="form-control" value="@ViewBag.Product.SellPrice" asp-for="SellPrice">
+                    <input class="form-control" asp-for="SellPrice">
                     <span class="text-danger" asp-validation-for="SellPrice"></span>
                 </div>
                 <div class="col">
                     <label asp-for="Discount"></label>
-                    <input class="form-control" value="@ViewBag.Product.Discount" asp-for="Discount">
+                    <input class="form-control" asp-for="Discount">
                     <span class="text-danger" asp-validation-for="Discount"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col">
                     <label asp-for="Quantity"></label>
-                    <input class="form-control" value="@ViewBag.Product.Quantity" asp-for="Quantity">
+                    <input class="form-control" asp-for="Quantity">
                     <span class="text-danger" asp-validation-for="Quantity"></span>
                 </div>
                 <div class="col">
@@ -74,3 +94,5 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+</div>

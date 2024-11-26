@@ -93,12 +93,17 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
 
     public async Task<IActionResult> Update(int? id)
     {
-        Product? product = await _context.Products.Where(prod => prod.IsDeleted == false).Include(prod => prod.Images).FirstOrDefaultAsync(prod => prod.Id == id);
+        Product? product = await _context.Products
+            .Include(prod => prod.Images)
+            .Where(prod => prod.IsDeleted == false)
+            .FirstOrDefaultAsync(prod => prod.Id == id);
+
         if (product == null) return NotFound();
 
-        ViewBag.Brands = await _context.Brands.Where(brand => brand.IsDeleted == false).ToListAsync();
-        ViewBag.Product = product;
-        return View();
+        ProductUpdateVM vm = product;
+        ViewBag.Brands = await _context.Brands.ToListAsync();
+
+        return View(vm);
     }
 
     [HttpPost]
@@ -129,9 +134,6 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
                 ModelState.AddModelError("OtherFiles", $"Invalid size of files: {String.Join(", ", fileNames)}. Must be less than 2mb");
             }
         }
-
-        ViewBag.Brands = await _context.Brands.Where(brand => brand.IsDeleted == false).ToListAsync();
-        ViewBag.Product = await _context.Products.Where(prod => prod.IsDeleted == false).FirstOrDefaultAsync(prod => prod.Id == id);
 
         if (!ModelState.IsValid)
         {
@@ -179,5 +181,22 @@ public class ProductController(UniqloDbContext _context, IWebHostEnvironment _en
         await _context.SaveChangesAsync();
 
         return RedirectToAction(nameof(Index));
+    }
+
+    public async Task<IActionResult> DeleteImgs(int id, IEnumerable<string> imgNames)
+    {
+        int res = await _context.ProductImages.Where(x => imgNames.Contains(x.ImageUrl)).ExecuteDeleteAsync();
+
+        if (res >= 1)
+        {
+            string fullPath;
+            foreach (string img in imgNames)
+            {
+                fullPath = Path.Combine(_env.WebRootPath, "imgs", "products", img);
+                System.IO.File.Delete(img);
+            }
+        }
+
+        return RedirectToAction(nameof(Update), new { id });
     }
 }
