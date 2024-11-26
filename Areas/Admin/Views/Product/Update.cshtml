@@ -55,7 +55,7 @@
                         <input class="d-none del-img-input" type="checkbox" value="@data" name="imgNames" id="@data" />
                         <label class="del-img-label" for="@data"><img width="80px" src="~/imgs/products/@data" /></label>
                     }
-                    <button onclick="$('#side').submit()" asp-action="DeleteImgs" asp-controller="Product" asp-route-id="@Model.Id" type="submit"></button>
+                    <button class="btn btn-danger" onclick="$('#side').submit()" asp-action="DeleteImgs" asp-controller="Product" asp-route-id="@Model.Id" type="submit">Delete</button>
                     <label asp-for="OtherFiles"></label>
                     <input class="form-control" accept="image/*" asp-for="OtherFiles">
                     <span class="text-danger" asp-validation-for="OtherFiles"></span>
