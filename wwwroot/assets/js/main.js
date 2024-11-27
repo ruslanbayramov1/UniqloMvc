@@ -425,9 +425,9 @@ $('.image-popup').magnificPopup({
 --------------------------------*/
   $("#slider-range").slider({
       range: true,
-      min: 10,
+      min: 100,
       max: 50000,
-      values: [1000, 7500],
+      values: [$("#slider-range").attr('min-val') ?? 500, $("#slider-range").attr('max-val') ?? 7500],
       slide: function(event, ui) {
           $("#amount").val(ui.values[0] + "-" + ui.values[1]);
       }
