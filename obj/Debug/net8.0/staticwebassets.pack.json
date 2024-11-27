@@ -6825,6 +6825,10 @@
       "PackagePath": "staticwebassets\\admin\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\assets\\bg\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\bg\\2.jpg"
+    },
+    {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },
@@ -7849,6 +7853,10 @@
       "PackagePath": "staticwebassets\\imgs\\brands\\c48943b4-16df-4f04-a072-86a3346fcc34.jpg"
     },
     {
+      "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\019ed91b-0181-4947-a78b-37ab892a38c1.jpeg",
+      "PackagePath": "staticwebassets\\imgs\\products\\019ed91b-0181-4947-a78b-37ab892a38c1.jpeg"
+    },
+    {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\0597a09c-5456-4b6a-bf0a-b0a965a12f3c.jpg",
       "PackagePath": "staticwebassets\\imgs\\products\\0597a09c-5456-4b6a-bf0a-b0a965a12f3c.jpg"
     },
@@ -7989,6 +7997,10 @@
       "PackagePath": "staticwebassets\\imgs\\products\\8d0acd5c-e3ab-4480-ab6e-0a2abe88733d.jpg"
     },
     {
+      "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\a8922672-5cef-48ea-84ba-193580fc2f5b.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\a8922672-5cef-48ea-84ba-193580fc2f5b.jpg"
+    },
+    {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\afac9d7d-af7e-499b-8551-1a90e72d0dc0.jpeg",
       "PackagePath": "staticwebassets\\imgs\\products\\afac9d7d-af7e-499b-8551-1a90e72d0dc0.jpeg"
     },
@@ -8003,6 +8015,10 @@
     {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\b59c5cf0-bead-4a22-b27e-d422a4b8f954.jpeg",
       "PackagePath": "staticwebassets\\imgs\\products\\b59c5cf0-bead-4a22-b27e-d422a4b8f954.jpeg"
+    },
+    {
+      "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\b6a636dc-ce68-455b-a27c-1c3a46c34516.jpeg",
+      "PackagePath": "staticwebassets\\imgs\\products\\b6a636dc-ce68-455b-a27c-1c3a46c34516.jpeg"
     },
     {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\b970a7f1-b513-48d1-b080-5c36ab022c79.jpg",
@@ -8063,6 +8079,10 @@
     {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\f8d3c9c5-191e-4b33-a216-65e82f867301.jpeg",
       "PackagePath": "staticwebassets\\imgs\\products\\f8d3c9c5-191e-4b33-a216-65e82f867301.jpeg"
+    },
+    {
+      "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\fa5de5a9-8077-4424-8005-20495a9082e4.jpg",
+      "PackagePath": "staticwebassets\\imgs\\products\\fa5de5a9-8077-4424-8005-20495a9082e4.jpg"
     },
     {
       "Id": "C:\\AB108\\my-apps\\UniqloMvc\\wwwroot\\imgs\\products\\fd5abbfb-0114-46b1-b7fa-26f5400ebb4d.jpeg",

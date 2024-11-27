@@ -1704,6 +1704,7 @@ wwwroot\admin\vendor\jquery\jquery.slim.min.map
 wwwroot\admin\vendor\jquery-easing\jquery.easing.compatibility.js
 wwwroot\admin\vendor\jquery-easing\jquery.easing.js
 wwwroot\admin\vendor\jquery-easing\jquery.easing.min.js
+wwwroot\assets\bg\2.jpg
 wwwroot\assets\css\bootstrap.min.css
 wwwroot\assets\css\core.css
 wwwroot\assets\css\custom.css
@@ -1960,6 +1961,7 @@ wwwroot\imgs\brands\502562cc-52b5-4d9e-9866-9bea85f1a071.jpg
 wwwroot\imgs\brands\80267ab7-6707-4068-ab58-68f4fc88b754.jpg
 wwwroot\imgs\brands\b1b0d0ea-571f-473c-903b-e6f85d1bff24.jpg
 wwwroot\imgs\brands\c48943b4-16df-4f04-a072-86a3346fcc34.jpg
+wwwroot\imgs\products\019ed91b-0181-4947-a78b-37ab892a38c1.jpeg
 wwwroot\imgs\products\0597a09c-5456-4b6a-bf0a-b0a965a12f3c.jpg
 wwwroot\imgs\products\08e2325b-efc3-41d6-930a-9750dca0b310.jpg
 wwwroot\imgs\products\0cfbf707-4d3e-4350-99d2-a199174eda83.jpg
@@ -1995,10 +1997,12 @@ wwwroot\imgs\products\772804bd-e525-460f-8130-25c0d4351e08.jpg
 wwwroot\imgs\products\7bd0102a-5153-4c0e-8c13-190da11bb875.jpg
 wwwroot\imgs\products\7f0f3196-774a-4d3c-8e1c-6e9d73a30a42.jpg
 wwwroot\imgs\products\8d0acd5c-e3ab-4480-ab6e-0a2abe88733d.jpg
+wwwroot\imgs\products\a8922672-5cef-48ea-84ba-193580fc2f5b.jpg
 wwwroot\imgs\products\afac9d7d-af7e-499b-8551-1a90e72d0dc0.jpeg
 wwwroot\imgs\products\b339d4de-1de9-4dc9-892b-18d035caa38f.jpeg
 wwwroot\imgs\products\b3f01774-a3d6-4645-8b44-bd74b87a7e5e.jpg
 wwwroot\imgs\products\b59c5cf0-bead-4a22-b27e-d422a4b8f954.jpeg
+wwwroot\imgs\products\b6a636dc-ce68-455b-a27c-1c3a46c34516.jpeg
 wwwroot\imgs\products\b970a7f1-b513-48d1-b080-5c36ab022c79.jpg
 wwwroot\imgs\products\c54a74a0-e7d6-426b-b48d-a28f6fb8be50.jpg
 wwwroot\imgs\products\c9088bb9-f84b-4ab0-a12f-c3627bd73101.jpg
@@ -2014,6 +2018,7 @@ wwwroot\imgs\products\f238c8f0-37e2-4dce-a71e-47d3e968be20.jpg
 wwwroot\imgs\products\f5b899e9-d179-41e5-8cad-017b75715b98.webp
 wwwroot\imgs\products\f86c24f0-369e-4478-a67e-e721e024425f.jpg
 wwwroot\imgs\products\f8d3c9c5-191e-4b33-a216-65e82f867301.jpeg
+wwwroot\imgs\products\fa5de5a9-8077-4424-8005-20495a9082e4.jpg
 wwwroot\imgs\products\fd5abbfb-0114-46b1-b7fa-26f5400ebb4d.jpeg
 wwwroot\imgs\products\fed8aa4d-e874-4e13-b5ac-0097f0026195.jpg
 wwwroot\imgs\sliders\28d4736b-63dc-4269-8a87-b3bbe89c3b92.jpg
