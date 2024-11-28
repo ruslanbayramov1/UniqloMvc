@@ -33,7 +33,7 @@
 
 <body>
     <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Body main wrapper start -->
     <div class="wrapper wrap__box__style--1" style="padding-bottom: 0px;">
@@ -55,7 +55,7 @@
                             <nav class="mainmenu__nav d-none d-lg-block">
                                 <ul class="main__menu">
                                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                                    <li><a asp-action="Shop" asp-controller="Home">Shop</a></li>
+                                    <li><a asp-action="Index" asp-controller="Shop">Shop</a></li>
                                     <li><a asp-action="About" asp-controller="Home">About</a></li>
                                     <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
                                 </ul>
@@ -96,40 +96,28 @@
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
                     </div>
                     <div class="shp__cart__wrap">
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="~/assets/images/product/sm-img/1.jpg" alt="product images">
-                                </a>
+                        @foreach (var data in (List<BasketProductVM>)ViewBag.Basket ?? [])
+                        { 
+                            <div class="shp__single__product">
+                                <div class="shp__pro__thumb">
+                                    <a href="#">
+                                        <img src="~/imgs/products/@data.ImageUrl" alt="product">
+                                    </a>
+                                </div>
+                                <div class="shp__pro__details">
+                                    <h2><a href="product-details.html">@data.Name</a></h2>
+                                    <span class="quantity">QTY: @data.Count</span>
+                                    <span class="shp__price">$@data.SellPrice</span>
+                                </div>
+                                <div class="remove__btn">
+                                    <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                                </div>
                             </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="~/assets/images/product/sm-img/2.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$25.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
+                        }
                     </div>
                     <ul class="shoping__total">
                         <li class="subtotal">Subtotal:</li>
-                        <li class="total__price">$130.00</li>
+                        <li class="total__price">$@ViewBag.FullPrice</li>
                     </ul>
                     <ul class="shopping__btn">
                         <li><a href="cart.html">View Cart</a></li>

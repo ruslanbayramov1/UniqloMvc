@@ -1,0 +1,174 @@
+﻿@model ShopVM
+@{
+    ViewData["Title"] = "Shop";
+}
+
+@section style {
+    <style>
+        .pr__old {
+            padding-left: 12px;
+            color: #606060;
+        }
+
+        .pr__new {
+            padding: 0;
+            color: #ff4136;
+        }
+
+        .input--brand {
+            display: none;
+        }
+
+        .input--brand + .label--brand {
+            color: #575757;
+            cursor: pointer;
+        }
+
+        .input--brand:checked + .label--brand {
+            color: red;
+        }
+    </style>
+}
+
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(../assets/bg/2.jpg) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Shop Sidebar</h2>
+                        <nav class="bradcaump-inner">
+                            <a class="breadcrumb-item" href="index.html">Home</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb-item active">Shop Sidebar</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Our ShopSide Area -->
+<section class="htc__shop__sidebar bg__white ptb--120">
+    <div class="container">
+        <div class="row">
+            <form asp-controller="Shop" asp-action="Index" method="get" class="col-md-12 col-lg-3 order-lg-1 order-2 col-sm-12">
+                <div class="htc__shop__left__sidebar">
+                    <!-- Start Range -->
+                    <div class="htc-grid-range">
+                        <h4 class="section-title-4">FILTER BY PRICE</h4>
+                        <div class="content-shopby">
+                            <div class="price_filter s-filter clear">
+                                <div>
+                                    <div min-val="500" max-val="7500" id="slider-range"></div>
+                                    <div class="slider__range--output">
+                                        <div class="price__output--wrap">
+                                            <div class="price--output">
+                                                <span>Price :</span><input name="amount" type="text" id="amount" readonly>
+                                            </div>
+                                            <div class="price--filter">
+                                                <button class="btn" type="submit">Filter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Range -->
+                    <!-- Start Product Cat -->
+                    <div class="htc__shop__cat">
+                        <h4 class="section-title-4">PRODUCT CATEGORIES</h4>
+                        <ul class="sidebar__list">
+                            <li>
+                                <input name="SelectedBrand" id="SelectedBrand-0" type="checkbox" value="0" class="input--brand" />
+                                <label for="SelectedBrand-0" class="label--brand">All Brands</label><span>@ViewBag.AllCount</span>
+                            </li>
+                            @foreach (var brand in Model.Brands ?? [])
+                            {
+                                <li>
+                                    <input name="SelectedBrand" id="SelectedBrand-@brand.Id" type="checkbox" value="@brand.Id" class="input--brand" />
+                                    <label for="SelectedBrand-@brand.Id" class="label--brand">@brand.Name</label><span>@brand.Count</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <!-- End Product Cat -->
+                    <!-- Start Short Form -->
+                    <div class="product__list__option">
+                        <div class="order-single-btn">
+                            <select id="sortby" name="sortby" class="select-color selectpicker">
+                                <option value="newness">Sort by newness</option>
+                                <option value="oldness">Sort by oldness</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- End Short Form -->
+                </div>
+            </form>
+            <div class="col-md-12 col-lg-9 order-lg-2 order-1 col-sm-12 col-xs-12 smt-30">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="producy__view__container">
+                            <!-- Start Short Form -->
+                            <div class="product__list__option">
+                                <div class="shp__pro__show">
+                                    <span>Showing 1 - 6 of 25 results</span>
+                                </div>
+                            </div>
+                            <!-- End Short Form -->
+                            <!-- Start List And Grid View -->
+                            <ul class="nav view__mode" role="tablist">
+                                <li role="presentation" class="grid-view active"><a class="active" href="#grid-view" role="tab" data-bs-toggle="tab"><i class="zmdi zmdi-grid"></i></a></li>
+                            </ul>
+                            <!-- End List And Grid View -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contet shop__grid__view__wrap">
+                    <!-- Start Single View -->
+                    <div role="tabpanel" id="grid-view" class="row single-grid-view tab-pane  active clearfix">
+                        <!-- Start Single Product -->
+                        @foreach (var product in Model.Products ?? [])
+                        {
+                            <div class="col-md-4 col-lg-4 col-sm-12">
+                                <div class="product">
+                                    <div class="product__inner">
+                                        <div class="pro__thumb">
+                                            <a href="#">
+                                                <img src="~/imgs/products/@product.ImageUrl" alt="product">
+                                            </a>
+                                        </div>
+                                        <div class="product__hover__info">
+                                            <ul class="product__action">
+                                                <li><a title="Add To Cart" asp-action="AddBasket" asp-controller="Shop" asp-route-id="@product.Id"><span class="ti-shopping-cart"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="add__to__wishlist">
+                                            <a data-bs-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="product__details">
+                                        <h2><a href="product-details.html">@product.Name</a></h2>
+                                        <ul class="product__price">
+                                            <li class="pr__new">$@(product.SellPrice - (product.SellPrice * product.Discount / 100))</li>
+                                            @if (product.Discount > 0)
+                                            {
+                                                <del class="pr__old">$@product.SellPrice</del>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <!-- End Single Product -->
+                    </div>
+                    <!-- End Single View -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Our ShopSide Area -->
