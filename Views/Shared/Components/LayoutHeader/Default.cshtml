@@ -74,7 +74,7 @@
                             <div class="shp__pro__details">
                                 <h2><a href="product-details.html">@data.Name</a></h2>
                                 <span class="quantity">QTY: @data.Count</span>
-                                <span class="shp__price">$@data.SellPrice</span>
+                                <span class="shp__price">$@(data.SellPrice * data.Count)</span>
                             </div>
                             <div class="remove__btn">
                                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>

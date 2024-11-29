@@ -84,12 +84,9 @@ namespace UniqloMvc.Controllers
 
             foreach (var product in basket)
             {
-                var basketItem = basketCookie.FirstOrDefault(y => y.Id == product.Id);
-                if (basketItem != null)
-                {
-                    product.Count = basketItem.Count;
-                }
+                product.Count = basketCookie.First(x => x.Id == product.Id).Count; //adding count
             }
+
             ViewBag.Basket = basket;
             ViewBag.FullPrice = basket.Sum(x => x.Count * x.SellPrice);
 
