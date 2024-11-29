@@ -150,7 +150,7 @@
                                                 <ul class="product__action">
                                                     <li><a title="Add To Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     <li><a data-bs-toggle="modal" data-bs-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                    <li><a title="Add To Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                    <li><a title="Add To Cart" asp-action="AddBasket" asp-controller="Shop" asp-route-id="@data.Id"><span class="ti-shopping-cart"></span></a></li>
                                                 </ul>
                                             </div>
                                         </div>

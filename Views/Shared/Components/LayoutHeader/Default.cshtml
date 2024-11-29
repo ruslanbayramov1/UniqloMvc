@@ -1,0 +1,97 @@
+﻿@model List<BasketProductVM>
+<!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<!-- Body main wrapper start -->
+<div class="wrapper wrap__box__style--1" style="padding-bottom: 0px;">
+    <!-- Start Header Style -->
+    <header id="header" class="htc-header header--3 bg__white">
+        <!-- Start Mainmenu Area -->
+        <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-2 col-lg-2 col-6">
+                        <div class="logo">
+                            <a asp-action="Index" asp-controller="Home">
+                                <img src="~/assets/images/logo/uniqlo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Start MAinmenu Ares -->
+                    <div class="col-md-8 col-lg-8 d-none d-md-block">
+                        <nav class="mainmenu__nav d-none d-lg-block">
+                            <ul class="main__menu">
+                                <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                                <li><a asp-action="Index" asp-controller="Shop">Shop</a></li>
+                                <li><a asp-action="About" asp-controller="Home">About</a></li>
+                                <li><a asp-action="Contact" asp-controller="Home">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="mobile-menu clearfix  d-block d-lg-none">
+                            <nav id="mobile_dropdown">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">pages</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- End MAinmenu Ares -->
+                    <div class="col-md-2 col-lg-2 col-6">
+                        <ul class="menu-extra">
+                            <li><a href="login-register.html"><span class="ti-user"></span></a></li>
+                            <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-menu-area"></div>
+            </div>
+        </div>
+        <!-- End Mainmenu Area -->
+    </header>
+    <!-- End Header Style -->
+
+    <div class="body__overlay"></div>
+    <!-- Start Offset Wrapper -->
+    <div class="offset__wrapper">
+        <!-- Start Cart Panel -->
+        <div class="shopping__cart">
+            <div class="shopping__cart__inner">
+                <div class="offsetmenu__close__btn">
+                    <a href="#"><i class="zmdi zmdi-close"></i></a>
+                </div>
+                <div class="shp__cart__wrap">
+                    @foreach (var data in Model ?? [])
+                    {
+                        <div class="shp__single__product">
+                            <div class="shp__pro__thumb">
+                                <a href="#">
+                                    <img src="~/imgs/products/@data.ImageUrl" alt="product">
+                                </a>
+                            </div>
+                            <div class="shp__pro__details">
+                                <h2><a href="product-details.html">@data.Name</a></h2>
+                                <span class="quantity">QTY: @data.Count</span>
+                                <span class="shp__price">$@data.SellPrice</span>
+                            </div>
+                            <div class="remove__btn">
+                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <ul class="shoping__total">
+                    <li class="subtotal">Subtotal:</li>
+                    <li class="total__price">$@ViewBag.FullPrice</li>
+                </ul>
+                <ul class="shopping__btn">
+                    <li><a href="cart.html">View Cart</a></li>
+                    <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Cart Panel -->
+    </div>
+    <!-- End Offset Wrapper -->

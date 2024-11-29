@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using UniqloMvc.DataAccess;
+using UniqloMvc.Helpers;
 using UniqloMvc.ViewModels.Baskets;
 using UniqloMvc.ViewModels.Brands;
 using UniqloMvc.ViewModels.Commons;
@@ -71,7 +72,7 @@ namespace UniqloMvc.Controllers
                 }).ToListAsync();
 
             // basket part
-            List<BasketCookieVM> basketCookie = await GetBasket();
+            List<BasketCookieVM> basketCookie = await CookieHelper.GetBasket(HttpContext);
             int[] ids = basketCookie.Select(x => x.Id).ToArray();
             List<BasketProductVM> basket = await _context.Products.Where(x => ids.Contains(x.Id)).Select(x => new BasketProductVM
             {
@@ -90,7 +91,7 @@ namespace UniqloMvc.Controllers
                 }
             }
             ViewBag.Basket = basket;
-            ViewBag.FullPrice = basket.Sum(x => x.SellPrice);
+            ViewBag.FullPrice = basket.Sum(x => x.Count * x.SellPrice);
 
             return View(vm);
         }
@@ -104,7 +105,7 @@ namespace UniqloMvc.Controllers
                 Count = 1,
             };
             
-            List<BasketCookieVM> data = await GetBasket();
+            List<BasketCookieVM> data = await CookieHelper.GetBasket(HttpContext);
 
             if (data.Exists(x => x.Id == id))
             {
@@ -125,13 +126,6 @@ namespace UniqloMvc.Controllers
             HttpContext.Response.Cookies.Append("basket", dataText, opt);
 
             return RedirectToAction(nameof(Index));
-        }
-
-        public async Task<List<BasketCookieVM>> GetBasket()
-        {
-            string dataText = HttpContext.Request.Cookies["basket"] ?? "[]";
-            List<BasketCookieVM> basket = JsonSerializer.Deserialize<List<BasketCookieVM>>(dataText) ?? new();
-            return basket;
         }
     }
 }
