@@ -71,28 +71,8 @@ namespace UniqloMvc.Controllers
                     ImageUrl = x.CoverImage
                 }).ToListAsync();
 
-            // basket part
-            List<BasketCookieVM> basketCookie = await CookieHelper.GetBasket(HttpContext);
-            int[] ids = basketCookie.Select(x => x.Id).ToArray();
-            List<BasketProductVM> basket = await _context.Products.Where(x => ids.Contains(x.Id)).Select(x => new BasketProductVM
-            {
-                Id = x.Id,
-                Name = x.Name,
-                ImageUrl = x.CoverImage,
-                SellPrice = x.Discount > 0 ? (double)(x.SellPrice - (x.SellPrice * x.Discount / 100)): (double)x.SellPrice,
-            }).ToListAsync();
-
-            foreach (var product in basket)
-            {
-                product.Count = basketCookie.First(x => x.Id == product.Id).Count; //adding count
-            }
-
-            ViewBag.Basket = basket;
-            ViewBag.FullPrice = basket.Sum(x => x.Count * x.SellPrice);
-
             return View(vm);
         }
-
 
         public async Task<IActionResult> AddBasket(int id)
         {
@@ -121,6 +101,20 @@ namespace UniqloMvc.Controllers
 
             string dataText = JsonSerializer.Serialize(data);
             HttpContext.Response.Cookies.Append("basket", dataText, opt);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> RemoveBasketItem(int id)
+        {
+            List<BasketCookieVM> basket = await CookieHelper.GetBasket(HttpContext);
+            BasketCookieVM? item = basket.FirstOrDefault(x => x.Id == id);
+            if (item == null) return BadRequest();
+
+            basket.Remove(item);
+
+            string dataText = JsonSerializer.Serialize(basket);
+            HttpContext.Response.Cookies.Append("basket", dataText);
 
             return RedirectToAction(nameof(Index));
         }

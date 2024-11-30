@@ -14,7 +14,7 @@ namespace UniqloMvc
             //IoC - Inversion of Control
             builder.Services.AddDbContext<UniqloDbContext>(opt => {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql"));
-            });
+            }); 
             
 
             var app = builder.Build();

@@ -7,26 +7,26 @@
 <div class="slider__container slider--four">
     <div class="slider__activation__wrap owl-carousel owl-theme">
         <!-- Start Single Slide -->
-            @foreach (var data in Model.Sliders)
-            {
-                <div class="slide slider__fixed--height" style="background: rgba(0, 0, 0, 0) url(../imgs/sliders/@data.ImageUrl) no-repeat scroll center center / cover ;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-9 offset-sm-3 col-md-6 offset-md-6 col-lg-5 offset-lg-7">
-                                <div class="slider__content">
-                                    <div class="slider__inner">
-                                        <h1>@data.Title</h1>
-                                        <h4>@data.Subtitle</h4>
-                                        <div class="slider__btn">
-                                            <a class="htc__btn" asp-controller="Home" asp-action="Index" href="@data.Link">shop now</a>
-                                        </div>
+        @foreach (var data in Model.Sliders)
+        {
+            <div class="slide slider__fixed--height" style="background: rgba(0, 0, 0, 0) url(../imgs/sliders/@data.ImageUrl) no-repeat scroll center center / cover ;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9 offset-sm-3 col-md-6 offset-md-6 col-lg-5 offset-lg-7">
+                            <div class="slider__content">
+                                <div class="slider__inner">
+                                    <h1 style="color:#eee">@data.Title</h1>
+                                    <h4 style="color: #bbb">@data.Subtitle</h4>         
+                                    <div class="slider__btn" style="color:#bbb">
+                                        <a class="htc__btn" asp-controller="Shop" asp-action="Index" href="@data.Link" style="color:#bbb">shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
+        }
         <!-- End Single Slide -->
     </div>
 </div>
@@ -37,8 +37,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section__title section__title--2 text-center">
-                        <h2 class="title__line">Popular Products</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incididunt ut labore et dolore magna aliqua. </p>
+                        <h2 class="title__line">Top 3 Brands</h2>
+                        <p>Our brands that their sales are best among all the other brands. The watches gives elegance and good looking.</p>
                     </div>
                 </div>
             </div>
@@ -48,11 +48,11 @@
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="filter__menu__container">
                             <div class="product__menu">
-                                <button data-filter="*" class="is-checked">All</button>
-                                <button data-filter=".cat--1">Furnitures</button>
-                                <button data-filter=".cat--2">Bags</button>
-                                <button data-filter=".cat--3">Decoration</button>
-                                <button data-filter=".cat--4">Accessories</button>
+                                <button data-filter="*" class="is-checked">All</button >
+                                @foreach (var data in Model.Brands)
+                                { 
+                                    <button data-filter=".cat--@data.Id">@data.Name</button>
+                                }
                             </div>
                             <div class="filter__box">
                                 <a class="filter__menu" href="#/">filter</a>
@@ -138,7 +138,7 @@
                             @foreach (var data in Model.Products)
                             {
                                 <!-- Start Single Product -->
-                                <div class="single__pro cat--2 cat--4">
+                                <div class="single__pro cat--@data.BrandId">
                                     <div class="product">
                                         <div class="product__inner">
                                             <div class="pro__thumb">
@@ -156,8 +156,15 @@
                                         </div>
                                         <div class="product__details">
                                             <h2><a href="product-details.html">@data.Name</a></h2>
-                                            <span style="color:red" class="popular__pro__prize">$@(data.SellPrice - (data.SellPrice * data.Discount) / 100)</span>
-                                            <del style="color:lightgray">$@data.SellPrice</del>
+                                            @if (data.Discount != 0)
+                                            { 
+                                                <span style="color:red" class="popular__pro__prize">$@(data.SellPrice - (data.SellPrice * data.Discount) / 100)</span>
+                                                <del style="color:lightgray">$@data.SellPrice</del>
+                                            }
+                                            else
+                                            {
+                                                <span style="color:red" class="popular__pro__prize">$@data.SellPrice</span>
+                                            }
                                         </div>
                                     </div>
                                 </div>
