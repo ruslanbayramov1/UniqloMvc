@@ -81,7 +81,7 @@ namespace UniqloMvc.Controllers
                 Id = id,
                 Count = 1,
             };
-            
+
             List<BasketCookieVM> data = await CookieHelper.GetBasket(HttpContext);
 
             if (data.Exists(x => x.Id == id))
@@ -95,7 +95,7 @@ namespace UniqloMvc.Controllers
             }
 
             CookieOptions opt = new CookieOptions
-            { 
+            {
                 MaxAge = TimeSpan.FromHours(12)
             };
 
@@ -115,6 +115,44 @@ namespace UniqloMvc.Controllers
 
             string dataText = JsonSerializer.Serialize(basket);
             HttpContext.Response.Cookies.Append("basket", dataText);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> IncreaseQuantity(int id)
+        {
+            List<BasketCookieVM> basket = await CookieHelper.GetBasket(HttpContext);
+
+            if (basket.Exists(x => x.Id == id))
+            {
+                BasketCookieVM item = basket.First(x => x.Id == id);
+                item.Count += 1;
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+            await CookieHelper.SetBasket(basket, HttpContext);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> DecreaseQuantity(int id)
+        {
+            List<BasketCookieVM> basket = await CookieHelper.GetBasket(HttpContext);
+
+            if (basket.Exists(x => x.Id == id))
+            {
+                BasketCookieVM item = basket.First(x => x.Id == id);
+                item.Count -= 1;
+            }
+            else
+            { 
+                return BadRequest();
+            }
+
+            await CookieHelper.SetBasket(basket, HttpContext);
 
             return RedirectToAction(nameof(Index));
         }

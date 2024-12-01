@@ -23568,6 +23568,342 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"v4p4w80ts6"},{"Name":"integrity","Value":"sha256-P9i9Dr5PTiYQtuv2Rj7xaQ4Mm0nQaA5M/ShcjxSWz6w="},{"Name":"label","Value":"_content/UniqloMvc/imgs/brands/eb3107d6-da2e-4eaf-a396-0682aeefb56e.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6626"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022P9i9Dr5PTiYQtuv2Rj7xaQ4Mm0nQaA5M/ShcjxSWz6w=\u0022"},{"Name":"Last-Modified","Value":"Fri, 29 Nov 2024 11:58:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-1_converted-removebg-preview.jlu80x0htw.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jlu80x0htw"},{"Name":"integrity","Value":"sha256-GU87owzC31DI/GRhntO0F2cc2UThPzOIzvTyqqK6EW8="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/1-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"134283"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022GU87owzC31DI/GRhntO0F2cc2UThPzOIzvTyqqK6EW8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-GU87owzC31DI/GRhntO0F2cc2UThPzOIzvTyqqK6EW8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"134283"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022GU87owzC31DI/GRhntO0F2cc2UThPzOIzvTyqqK6EW8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QHl1bNW4lltmO5QFNRtDV8Gz/zlGkDegSYwsKQh3J2c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"158178"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022QHl1bNW4lltmO5QFNRtDV8Gz/zlGkDegSYwsKQh3J2c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-2_converted-removebg-preview.slvxv3n6vt.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"slvxv3n6vt"},{"Name":"integrity","Value":"sha256-QHl1bNW4lltmO5QFNRtDV8Gz/zlGkDegSYwsKQh3J2c="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/1-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"158178"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022QHl1bNW4lltmO5QFNRtDV8Gz/zlGkDegSYwsKQh3J2c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-3_converted-removebg-preview.42paw9jk8a.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"42paw9jk8a"},{"Name":"integrity","Value":"sha256-XLGmCccL5ENvnr9e9mE7c9p5VsLQeHP5kS9iEfQLz6A="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/1-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"74241"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022XLGmCccL5ENvnr9e9mE7c9p5VsLQeHP5kS9iEfQLz6A=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XLGmCccL5ENvnr9e9mE7c9p5VsLQeHP5kS9iEfQLz6A="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"74241"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022XLGmCccL5ENvnr9e9mE7c9p5VsLQeHP5kS9iEfQLz6A=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1_converted-removebg-preview.h6eonyr33g.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"h6eonyr33g"},{"Name":"integrity","Value":"sha256-N/OireQiX7b5THma8MICaikPmY3\u002B4bmZ5KzJjky3v/Y="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"86216"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022N/OireQiX7b5THma8MICaikPmY3\u002B4bmZ5KzJjky3v/Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-N/OireQiX7b5THma8MICaikPmY3\u002B4bmZ5KzJjky3v/Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"86216"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022N/OireQiX7b5THma8MICaikPmY3\u002B4bmZ5KzJjky3v/Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:06:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WlMIoLLugohEMa6vLDhVjaBDvK60CWfEe1\u002BV3MvY9cQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"186611"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022WlMIoLLugohEMa6vLDhVjaBDvK60CWfEe1\u002BV3MvY9cQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-1_converted-removebg-preview.q43qt5tiwx.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"q43qt5tiwx"},{"Name":"integrity","Value":"sha256-WlMIoLLugohEMa6vLDhVjaBDvK60CWfEe1\u002BV3MvY9cQ="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/2-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"186611"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022WlMIoLLugohEMa6vLDhVjaBDvK60CWfEe1\u002BV3MvY9cQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-2_converted-removebg-preview.877w8tugk7.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"877w8tugk7"},{"Name":"integrity","Value":"sha256-jJd/yK8BOmb7NChFj3SKoD5BlxLG7UbQ90xWinLd4p0="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/2-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"76700"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022jJd/yK8BOmb7NChFj3SKoD5BlxLG7UbQ90xWinLd4p0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jJd/yK8BOmb7NChFj3SKoD5BlxLG7UbQ90xWinLd4p0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"76700"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022jJd/yK8BOmb7NChFj3SKoD5BlxLG7UbQ90xWinLd4p0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-3_converted-removebg-preview.0i0dbzdvu4.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0i0dbzdvu4"},{"Name":"integrity","Value":"sha256-yCqj3kmGiawMd76bmw3vqW1nNkGFtMQmM8o5MMj796E="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/2-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"227530"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022yCqj3kmGiawMd76bmw3vqW1nNkGFtMQmM8o5MMj796E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-yCqj3kmGiawMd76bmw3vqW1nNkGFtMQmM8o5MMj796E="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"227530"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022yCqj3kmGiawMd76bmw3vqW1nNkGFtMQmM8o5MMj796E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-owko5anI/bRa1XO0ClGxK6cXoh\u002BVB7eME714D3wlNxU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"117443"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022owko5anI/bRa1XO0ClGxK6cXoh\u002BVB7eME714D3wlNxU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Cartier/2_converted-removebg-preview.vtb3jm26d5.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Cartier\2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vtb3jm26d5"},{"Name":"integrity","Value":"sha256-owko5anI/bRa1XO0ClGxK6cXoh\u002BVB7eME714D3wlNxU="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Cartier/2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"117443"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022owko5anI/bRa1XO0ClGxK6cXoh\u002BVB7eME714D3wlNxU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 14:07:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xbbtw/2mwlZp6dfHh\u002BXD\u002BeAb3ABJK748FBXSrLkq5lI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"231466"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022xbbtw/2mwlZp6dfHh\u002BXD\u002BeAb3ABJK748FBXSrLkq5lI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-1_converted-removebg-preview.pzskvq0z5u.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pzskvq0z5u"},{"Name":"integrity","Value":"sha256-xbbtw/2mwlZp6dfHh\u002BXD\u002BeAb3ABJK748FBXSrLkq5lI="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"231466"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022xbbtw/2mwlZp6dfHh\u002BXD\u002BeAb3ABJK748FBXSrLkq5lI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-2_converted-removebg-preview.bmkgcp0528.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bmkgcp0528"},{"Name":"integrity","Value":"sha256-Y5xySNg9pjpBsJ98Zwy8O8pku2nrdJr\u002BPoiCnDQfQro="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"138292"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Y5xySNg9pjpBsJ98Zwy8O8pku2nrdJr\u002BPoiCnDQfQro=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Y5xySNg9pjpBsJ98Zwy8O8pku2nrdJr\u002BPoiCnDQfQro="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"138292"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Y5xySNg9pjpBsJ98Zwy8O8pku2nrdJr\u002BPoiCnDQfQro=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-3_converted-removebg-preview.jaln672w5e.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jaln672w5e"},{"Name":"integrity","Value":"sha256-iy0IuajyLjh\u002Bwx07gq5nrNH6ai06HSCWsh16g1\u002Bo3oQ="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"107112"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iy0IuajyLjh\u002Bwx07gq5nrNH6ai06HSCWsh16g1\u002Bo3oQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iy0IuajyLjh\u002Bwx07gq5nrNH6ai06HSCWsh16g1\u002Bo3oQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"107112"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iy0IuajyLjh\u002Bwx07gq5nrNH6ai06HSCWsh16g1\u002Bo3oQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1_converted-removebg-preview.nby24f9okx.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nby24f9okx"},{"Name":"integrity","Value":"sha256-Q8qNxYKu/48u0fK5ccuj3oZK1AwsiFX6mDuY9KEHwMQ="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"121918"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Q8qNxYKu/48u0fK5ccuj3oZK1AwsiFX6mDuY9KEHwMQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:25:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Q8qNxYKu/48u0fK5ccuj3oZK1AwsiFX6mDuY9KEHwMQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"121918"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Q8qNxYKu/48u0fK5ccuj3oZK1AwsiFX6mDuY9KEHwMQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:25:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iR9k3gCVUpoKjazhqi6DAHT9N8xwouhy2GCoG5222rM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"392381"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iR9k3gCVUpoKjazhqi6DAHT9N8xwouhy2GCoG5222rM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-1_converted-removebg-preview.xunrad9tdd.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xunrad9tdd"},{"Name":"integrity","Value":"sha256-iR9k3gCVUpoKjazhqi6DAHT9N8xwouhy2GCoG5222rM="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"392381"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iR9k3gCVUpoKjazhqi6DAHT9N8xwouhy2GCoG5222rM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gnanjY/mxZJnoQm6EnUl8ZQS/Z/nIft3bxck5tXRBvo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"192610"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022gnanjY/mxZJnoQm6EnUl8ZQS/Z/nIft3bxck5tXRBvo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-2_converted-removebg-preview.y4t422o4lt.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y4t422o4lt"},{"Name":"integrity","Value":"sha256-gnanjY/mxZJnoQm6EnUl8ZQS/Z/nIft3bxck5tXRBvo="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"192610"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022gnanjY/mxZJnoQm6EnUl8ZQS/Z/nIft3bxck5tXRBvo=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-GaMjfVDUBGxjCeJEwouqqmzDv\u002B67vtAH/VwRigib7xg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"150849"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022GaMjfVDUBGxjCeJEwouqqmzDv\u002B67vtAH/VwRigib7xg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-3_converted-removebg-preview.trrieukk2h.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"trrieukk2h"},{"Name":"integrity","Value":"sha256-GaMjfVDUBGxjCeJEwouqqmzDv\u002B67vtAH/VwRigib7xg="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-2-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"150849"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022GaMjfVDUBGxjCeJEwouqqmzDv\u002B67vtAH/VwRigib7xg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2_converted-removebg-preview.dults2dluu.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dults2dluu"},{"Name":"integrity","Value":"sha256-K/iStABM3PyJZiyadhnKiUfn2GD3DYLoTlg9d3TQJF8="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"188250"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022K/iStABM3PyJZiyadhnKiUfn2GD3DYLoTlg9d3TQJF8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:25:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-K/iStABM3PyJZiyadhnKiUfn2GD3DYLoTlg9d3TQJF8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"188250"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022K/iStABM3PyJZiyadhnKiUfn2GD3DYLoTlg9d3TQJF8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:25:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-1_converted-removebg-preview.fc5go41mc0.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fc5go41mc0"},{"Name":"integrity","Value":"sha256-D7exFRpxHRp8cYcEClfLd7qaIXjPd4G0fBIT1bjDfiA="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-1_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"275172"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022D7exFRpxHRp8cYcEClfLd7qaIXjPd4G0fBIT1bjDfiA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-1_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-1_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-D7exFRpxHRp8cYcEClfLd7qaIXjPd4G0fBIT1bjDfiA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"275172"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022D7exFRpxHRp8cYcEClfLd7qaIXjPd4G0fBIT1bjDfiA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:27:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-2_converted-removebg-preview.5z9zcyawgd.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5z9zcyawgd"},{"Name":"integrity","Value":"sha256-v\u002B7G0y8vaBm9CV2PkNnus2Oj1vGQfe/sSUgZtYnM7xQ="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-2_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"130434"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022v\u002B7G0y8vaBm9CV2PkNnus2Oj1vGQfe/sSUgZtYnM7xQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:28:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-2_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-2_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-v\u002B7G0y8vaBm9CV2PkNnus2Oj1vGQfe/sSUgZtYnM7xQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"130434"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022v\u002B7G0y8vaBm9CV2PkNnus2Oj1vGQfe/sSUgZtYnM7xQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:28:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-3_converted-removebg-preview.90glr1q8sn.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"90glr1q8sn"},{"Name":"integrity","Value":"sha256-t3ywPxIqaULlWXOqSppYb28fU\u002BIwHWF4LS0GXhQ9cwA="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"89951"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022t3ywPxIqaULlWXOqSppYb28fU\u002BIwHWF4LS0GXhQ9cwA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-t3ywPxIqaULlWXOqSppYb28fU\u002BIwHWF4LS0GXhQ9cwA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"89951"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022t3ywPxIqaULlWXOqSppYb28fU\u002BIwHWF4LS0GXhQ9cwA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:28:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3_converted-removebg-preview.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2INKYKCu999DJerzhse8h9DR2Malxl2TUJydpIUOki4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"131972"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00222INKYKCu999DJerzhse8h9DR2Malxl2TUJydpIUOki4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/IWC/iwc-3_converted-removebg-preview.w6a98snym6.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\IWC\iwc-3_converted-removebg-preview.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w6a98snym6"},{"Name":"integrity","Value":"sha256-2INKYKCu999DJerzhse8h9DR2Malxl2TUJydpIUOki4="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/IWC/iwc-3_converted-removebg-preview.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"131972"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00222INKYKCu999DJerzhse8h9DR2Malxl2TUJydpIUOki4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:26:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1-1.ive76e8h4z.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ive76e8h4z"},{"Name":"integrity","Value":"sha256-8jqRncSoOR3p6FNrai2dA\u002B0IXkcGD1ICYTzZ5Gf3urc="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/1-1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13571"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228jqRncSoOR3p6FNrai2dA\u002B0IXkcGD1ICYTzZ5Gf3urc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:46:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1-1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8jqRncSoOR3p6FNrai2dA\u002B0IXkcGD1ICYTzZ5Gf3urc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"13571"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228jqRncSoOR3p6FNrai2dA\u002B0IXkcGD1ICYTzZ5Gf3urc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:46:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1-2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1-2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UE4HwbThwFG6ydOTY/fEM\u002B430DY9omR9HO/JHqMsvmk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"41585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UE4HwbThwFG6ydOTY/fEM\u002B430DY9omR9HO/JHqMsvmk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:46:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1-2.oui9qwt9a1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1-2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oui9qwt9a1"},{"Name":"integrity","Value":"sha256-UE4HwbThwFG6ydOTY/fEM\u002B430DY9omR9HO/JHqMsvmk="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/1-2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"41585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UE4HwbThwFG6ydOTY/fEM\u002B430DY9omR9HO/JHqMsvmk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:46:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1.ji837o5z91.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ji837o5z91"},{"Name":"integrity","Value":"sha256-2yTQRN9tmHd2VFRjwxhV6DdjhPNN7xUPXAKHhyv2xLA="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"47742"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00222yTQRN9tmHd2VFRjwxhV6DdjhPNN7xUPXAKHhyv2xLA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:45:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2yTQRN9tmHd2VFRjwxhV6DdjhPNN7xUPXAKHhyv2xLA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47742"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00222yTQRN9tmHd2VFRjwxhV6DdjhPNN7xUPXAKHhyv2xLA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:45:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2-1.fjx3czs80z.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fjx3czs80z"},{"Name":"integrity","Value":"sha256-dXvxtaTCi\u002BKS9BGNh28iEm571nE2jPUWw9dAX\u002BTulyU="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/2-1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"16259"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022dXvxtaTCi\u002BKS9BGNh28iEm571nE2jPUWw9dAX\u002BTulyU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2-1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dXvxtaTCi\u002BKS9BGNh28iEm571nE2jPUWw9dAX\u002BTulyU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"16259"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022dXvxtaTCi\u002BKS9BGNh28iEm571nE2jPUWw9dAX\u002BTulyU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2-2.30yxkwrlem.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2-2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"30yxkwrlem"},{"Name":"integrity","Value":"sha256-Yy71DmY9JTdPYzVTrPNmymIw8MpaPpepSyLiqGz7Yj0="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/2-2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"51057"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Yy71DmY9JTdPYzVTrPNmymIw8MpaPpepSyLiqGz7Yj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2-2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2-2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Yy71DmY9JTdPYzVTrPNmymIw8MpaPpepSyLiqGz7Yj0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"51057"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Yy71DmY9JTdPYzVTrPNmymIw8MpaPpepSyLiqGz7Yj0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ev0aV7PmQCwejuN/vOQw2iL1lMRWWZC2m\u002BCA0j\u002BDKkU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"59205"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ev0aV7PmQCwejuN/vOQw2iL1lMRWWZC2m\u002BCA0j\u002BDKkU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/2.unex1p5x2v.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"unex1p5x2v"},{"Name":"integrity","Value":"sha256-ev0aV7PmQCwejuN/vOQw2iL1lMRWWZC2m\u002BCA0j\u002BDKkU="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"59205"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ev0aV7PmQCwejuN/vOQw2iL1lMRWWZC2m\u002BCA0j\u002BDKkU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:52:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/3-1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\3-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PXmUNJh0vhBxCEDrUz3Ga/2c2\u002BbiEzeNwWMMsgsuAIY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"14849"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PXmUNJh0vhBxCEDrUz3Ga/2c2\u002BbiEzeNwWMMsgsuAIY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:58:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/3-1.le7n87zh71.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\3-1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"le7n87zh71"},{"Name":"integrity","Value":"sha256-PXmUNJh0vhBxCEDrUz3Ga/2c2\u002BbiEzeNwWMMsgsuAIY="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/3-1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14849"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PXmUNJh0vhBxCEDrUz3Ga/2c2\u002BbiEzeNwWMMsgsuAIY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:58:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/3.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4shMk1waBaRUfr9Yj6t7YiiW/tsiKTKws2080\u002BACV18="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"39080"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224shMk1waBaRUfr9Yj6t7YiiW/tsiKTKws2080\u002BACV18=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:58:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/org/watches/Patek/3.uha3dlleub.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\org\watches\Patek\3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uha3dlleub"},{"Name":"integrity","Value":"sha256-4shMk1waBaRUfr9Yj6t7YiiW/tsiKTKws2080\u002BACV18="},{"Name":"label","Value":"_content/UniqloMvc/imgs/org/watches/Patek/3.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"39080"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00224shMk1waBaRUfr9Yj6t7YiiW/tsiKTKws2080\u002BACV18=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 13:58:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/UniqloMvc/imgs/products/0d7f9373-6532-40a1-9ef5-2bb461538689.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\products\0d7f9373-6532-40a1-9ef5-2bb461538689.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

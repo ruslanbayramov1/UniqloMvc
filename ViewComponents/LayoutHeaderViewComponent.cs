@@ -29,11 +29,7 @@ namespace UniqloMvc.ViewComponents
 
             foreach (var product in basket)
             {
-                var basketItem = basketCookie.FirstOrDefault(y => y.Id == product.Id);
-                if (basketItem != null)
-                {
-                    product.Count = basketItem.Count;
-                }
+                product.Count = basketCookie.First(x => x.Id == product.Id).Count;
             }
             ViewBag.FullPrice = basket.Sum(x => x.Count * x.SellPrice);
 

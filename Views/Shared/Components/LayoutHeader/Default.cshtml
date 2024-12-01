@@ -73,7 +73,13 @@
                             </div>
                             <div class="shp__pro__details">
                                 <h2><a href="product-details.html">@data.Name</a></h2>
-                                <span class="quantity">QTY: @data.Count</span>
+
+                                <div>
+                                    <a style="cursor:pointer" asp-action="DecreaseQuantity" asp-controller="Shop" asp-route-id="@data.Id">-</a>
+                                    <span class="quantity">QTY: @data.Count</span>
+                                    <a style="cursor:pointer" asp-action="IncreaseQuantity" asp-controller="Shop" asp-route-id="@data.Id">+</a>
+                                </div>
+
                                 <span class="shp__price">$@(data.SellPrice * data.Count)</span>
                             </div>
                             <div class="remove__btn">
