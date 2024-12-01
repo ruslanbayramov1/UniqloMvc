@@ -145,7 +145,14 @@ namespace UniqloMvc.Controllers
             if (basket.Exists(x => x.Id == id))
             {
                 BasketCookieVM item = basket.First(x => x.Id == id);
-                item.Count -= 1;
+                if (item.Count > 1)
+                {
+                    item.Count -= 1;
+                }
+                else
+                { 
+                    basket.Remove(item);
+                }
             }
             else
             { 
