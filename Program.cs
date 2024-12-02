@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UniqloMvc.DataAccess;
+using UniqloMvc.Models;
 
 namespace UniqloMvc
 {
@@ -14,7 +16,20 @@ namespace UniqloMvc
             //IoC - Inversion of Control
             builder.Services.AddDbContext<UniqloDbContext>(opt => {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql"));
-            }); 
+            });
+
+            builder.Services.AddIdentity<User, IdentityRole>(opt => { 
+                opt.User.RequireUniqueEmail = true;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequiredUniqueChars = 3;
+                opt.SignIn.RequireConfirmedPhoneNumber = false;
+                opt.SignIn.RequireConfirmedEmail = false;
+                opt.SignIn.RequireConfirmedAccount = false;
+                opt.Lockout.MaxFailedAccessAttempts = 5;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(60);
+            })
+                .AddEntityFrameworkStores<UniqloDbContext>()
+                .AddDefaultTokenProviders();
             
 
             var app = builder.Build();
