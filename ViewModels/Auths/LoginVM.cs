@@ -9,4 +9,6 @@ public class LoginVM
 
     [Required, MaxLength(32)]
     public string Password { get; set; }
+
+    public bool RememberMe { get; set; }
 }

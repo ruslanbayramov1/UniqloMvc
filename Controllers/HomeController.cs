@@ -42,4 +42,9 @@ public class HomeController(UniqloDbContext _context) : Controller
     {
         return View();
     }
+
+    public IActionResult AccessDenied()
+    {
+        return View();
+    }
 }

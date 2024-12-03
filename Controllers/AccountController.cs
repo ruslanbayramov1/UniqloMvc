@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using UniqloMvc.Enums;
+using UniqloMvc.Extensions;
 using UniqloMvc.Models;
 using UniqloMvc.ViewModels.Auths;
 
@@ -47,10 +49,16 @@ public class AccountController : Controller
             {
                 ModelState.AddModelError("", err.Description);
             }
+            return View();
         }
 
-        if (!ModelState.IsValid)
+        var roleRes = await _userManager.AddToRoleAsync(user, Roles.User.GetRole());
+        if (!roleRes.Succeeded)
         {
+            foreach (var err in roleRes.Errors)
+            {
+                ModelState.AddModelError("", err.Description);
+            }
             return View();
         }
 
@@ -68,20 +76,28 @@ public class AccountController : Controller
         User? user = await _userManager.FindByNameAsync(vm.Username);
         if (user == null)
         {
-            ModelState.AddModelError("", "Username not exists");
+            ModelState.AddModelError("", "Username or password is wrong");
             return View();
         }
 
-        bool res = await _userManager.CheckPasswordAsync(user, vm.Password);
+        var res = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
 
-        if (!res)
+        if (!res.Succeeded)
         {
-            user.AccessFailedCount++;
-            ModelState.AddModelError("", "Wrong password");
+            if (res.IsNotAllowed)
+            {
+                ModelState.AddModelError("", "Username or password is wrong");
+            }
+            else if (res.IsLockedOut)
+            {
+                ModelState.AddModelError("", $"Wait until {user.LockoutEnd!.Value}");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Username or password is wrong");
+            }
             return View();
         }
-
-        await _signInManager.SignInAsync(user, isPersistent: false);
 
         return RedirectToAction("Index", "Home");
     }
