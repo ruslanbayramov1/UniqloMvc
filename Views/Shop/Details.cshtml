@@ -1,68 +1,68 @@
-﻿@model Product
+﻿@model DetailVM
 @{
     ViewData["Title"] = "Details";
 }
 
 @section style {
-<style>
+    <style>
         .product__details__container {
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
         }
 
         .product__small__images {
-            display: flex;
-            justify-content: flex-start;
-            gap: 15px;
-            padding: 10px 0;
-            margin: 0;
-            list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
         }
 
         .product__small__images li {
-            cursor: pointer;
+        cursor: pointer;
         }
 
         .product__small__images img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .product__small__images img:hover {
-            transform: scale(1.1);
-            opacity: 0.8;
+        transform: scale(1.1);
+        opacity: 0.8;
         }
 
         .product__big__images {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
         }
 
         .portfolio-full-image {
-            width: 100%;
-            max-width: 600px;
-            display: flex;
-            justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
         }
 
         .tab-content img {
-            width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .tab-pane.active img {
-            display: block;
+        display: block;
         }
-</style>
+    </style>
 }
 
 <!-- Start Bradcaump area -->
@@ -93,7 +93,7 @@
                 <div class="product__details__container">
                     <!-- Start Small images -->
                     <ul class="nav product__small__images" role="tablist">
-                        @foreach (var data in Model.Images ?? [])
+                        @foreach (var data in Model.Product.Images ?? [])
                         {
                             <li role="presentation" class="pot-small-img">
                                 <a class="active" href="#img-tab-1" role="tab" data-bs-toggle="tab">
@@ -106,7 +106,7 @@
                     <div class="product__big__images">
                         <div class="portfolio-full-image tab-content">
                             <div role="tabpanel" class="tab-pane active" id="img-tab-1">
-                                <img width="400px" src="~/imgs/products/@Model.CoverImage" alt="full-image">
+                                <img width="400px" src="~/imgs/products/@Model.Product.CoverImage" alt="full-image">
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
             <div class="col-md-12 col-lg-6 col-sm-12 smt-30 xmt-30">
                 <div class="htc__product__details__inner">
                     <div class="pro__detl__title">
-                        <h2>@Model.Name</h2>
+                        <h2>@Model.Product.Name</h2>
                     </div>
                     <div class="pro__dtl__rating">
                         <ul class="pro__rating">
@@ -128,19 +128,19 @@
                         <span class="rat__qun">(Based on 0 Ratings)</span>
                     </div>
                     <div class="pro__details">
-                        <p>@Model.Description</p>
+                        <p>@Model.Product.Description</p>
                     </div>
-                    @if (@Model.Discount != 0)
+                    @if (@Model.Product.Discount != 0)
                     {
                         <ul class="pro__dtl__prize">
-                            <li style="margin-right:8px">$@((Model.SellPrice * (100 - Model.Discount)) / 100)</li>
-                            <li class="old__prize">$@Model.SellPrice</li>
+                            <li style="margin-right:8px">$@((Model.Product.SellPrice * (100 - Model.Product.Discount)) / 100)</li>
+                            <li class="old__prize">$@Model.Product.SellPrice</li>
                         </ul>
                     }
                     else
                     {
                         <ul class="pro__dtl__prize">
-                            <li>$@Model.SellPrice</li>
+                            <li>$@Model.Product.SellPrice</li>
                         </ul>
                     }
                     <div class="product-action-wrap">
@@ -193,7 +193,143 @@
                 </ul>
             </div>
         </div>
-        @await Component.InvokeAsync("ProductReviewForm")
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product__details__tab__content">
+                    <!-- Start Single Content -->
+                    <div role="tabpanel" id="reviews" class="product__tab__content active show">
+                        <div class="rating__wrap">
+                            <h2 class="rating-title">Rating and Review</h2>
+                            </div>
+                        </div>
+                        <div style="margin-bottom:96px" class="review__box">
+                            <form action="Comment" method="post" id="review-form">
+                                <div class="rating__wrap">
+                                <h2 class="rating-title">Write A Review</h2>
+                                <h4 class="rating-title-2">Your Rating</h4>
+                                <div class="rating__list">
+                                    <!-- Start Single List - 1 Star -->
+                                    <ul class="rating">
+                                        <li>
+                                            <input type="radio" id="rating-1" name="ReviewRate" value="1">
+                                            <label for="rating-1">
+                                                <i class="zmdi zmdi-star"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- End Single List -->
+                                    <!-- Start Single List - 2 Stars -->
+                                    <ul class="rating">
+                                        <li>
+                                            <input type="radio" id="rating-2" name="ReviewRate" value="2">
+                                            <label for="rating-2">
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- End Single List -->
+                                    <!-- Start Single List - 3 Stars -->
+                                    <ul class="rating">
+                                        <li>
+                                            <input type="radio" id="rating-3" name="ReviewRate" value="3">
+                                            <label for="rating-3">
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- End Single List -->
+                                    <!-- Start Single List - 4 Stars -->
+                                    <ul class="rating">
+                                        <li>
+                                            <input type="radio" id="rating-4" name="ReviewRate" value="4">
+                                            <label for="rating-4">
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- End Single List -->
+                                    <!-- Start Single List - 5 Stars -->
+                                    <ul class="rating">
+                                        <li>
+                                            <input type="radio" id="rating-5" name="ReviewRate" value="5">
+                                            <label for="rating-5">
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- End Single List -->
+                                </div>
+                            </div>
+                                <div class="single-review-form">
+                                    <div class="review-box name">
+                                        <input value="@(ViewBag.UserName ?? "")" disabled>
+                                        <input value="@(ViewBag.UserEmail ?? "")" disabled>
+                                        <input style="display:none" value="@ViewBag.ProductId" name="ProductId">
+                                    </div>
+                                </div>
+                                <div class="single-review-form">
+                                    <div class="review-box message">
+                                    <textarea name="Text" placeholder="Write optional review"></textarea>
+                                    </div>
+                                </div>
+                                <div class="review-btn">
+                                <button class="fv-btn" asp-action="Comment" asp-controller="Shop">submit review</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="review__address__inner">
+                            <!-- Start Single Review -->
+                            @foreach (var data in Model.Comments ?? [])
+                            { 
+                                <div class="pro__review">
+                                    @* <div class="review__thumb">
+                                        <img>
+                                    </div> *@
+                                    <div class="review__details">
+                                        <div class="review__info">
+                                            <h4><a href="#">@data.Fullname</a></h4>
+                                            <ul class="rating">
+                                                @for (int i = 0; i < data.ReviewRate; i++)
+                                                { 
+                                                    <li><i class="zmdi zmdi-star"></i></li>
+                                                }
+
+                                                @for (int j = data.ReviewRate; j <= 5 - data.ReviewRate; j++)
+                                                {
+                                                    <li><span class="ti-star"></span></li>
+                                                }
+                                            </ul>
+                                            @* <div class="rating__send">
+                                                <a href="#"><i class="zmdi zmdi-mail-reply"></i></a>
+                                                <a href="#"><i class="zmdi zmdi-close"></i></a>
+                                            </div> *@
+                                        </div>
+                                        <div class="review__date">
+                                            <span>@(data.CommentDate.ToString())</span>
+                                        </div>
+                                        <p>@data.Text</p>
+                                    </div>
+                                </div>
+                            }
+                            <!-- End Single Review -->
+                        </div>
+                        <!-- Start RAting Area -->
+                        <!-- End RAting Area -->
+                    </div>
+                    <!-- End Single Content -->
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!-- End Product tab -->

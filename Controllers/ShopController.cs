@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text.Json;
 using UniqloMvc.DataAccess;
 using UniqloMvc.Helpers;
@@ -8,6 +10,7 @@ using UniqloMvc.ViewModels.Baskets;
 using UniqloMvc.ViewModels.Brands;
 using UniqloMvc.ViewModels.Commons;
 using UniqloMvc.ViewModels.Products;
+using UniqloMvc.ViewModels.Reviews;
 
 namespace UniqloMvc.Controllers
 {
@@ -78,12 +81,61 @@ namespace UniqloMvc.Controllers
         public async Task<IActionResult> Details(int? id)
         { 
             if (!id.HasValue) return BadRequest();
+            
+            DetailVM vm = new DetailVM();
+
             Product? product = await _context.Products
                 .Include(x => x.Images)
                 .FirstOrDefaultAsync(x => x.Id == id);
-
             if (product == null) return NotFound();
-            return View(product);
+
+            List<CommentShowVM> comments = await _context.Reviews
+                .Include(x => x.User)
+                .Where(x => x.ProductId == id)
+                .Select(x => new CommentShowVM
+                { 
+                    Fullname = x.User.Fullname,
+                    Text = x.ReviewText,
+                    ReviewRate = x.ReviewRate,
+                    CommentDate = x.CreatedTime,
+                })
+                .ToListAsync();
+
+            string? userId  = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            ViewBag.UserName = user?.UserName;
+            ViewBag.UserEmail = user?.Email;
+            ViewBag.ProductId = id.Value;
+
+            vm.Product = product ?? new Product();
+            vm.Comments = comments;
+            return View(vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Comment(CommentCreateVM vm)
+        {
+            string? userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            if (user == null) return BadRequest();
+
+            
+            ViewBag.UserName = user?.UserName;
+            ViewBag.UserEmail = user?.Email;
+
+            await _context.Reviews.AddAsync(new Review
+            {
+                ReviewRate = vm.ReviewRate,
+                ReviewText = vm.Text,
+                ProductId = vm.ProductId,
+                UserId = user!.Id
+            });
+            await _context.SaveChangesAsync();
+            
+
+            return RedirectToAction(nameof(Details), new { id = vm.ProductId });
         }
 
         public async Task<IActionResult> AddBasket(int id)
