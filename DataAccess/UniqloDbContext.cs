@@ -10,6 +10,7 @@ namespace UniqloMvc.DataAccess
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         public UniqloDbContext(DbContextOptions<UniqloDbContext> opt) : base(opt)
         {

@@ -155,7 +155,7 @@
                                             </div>
                                         </div>
                                         <div class="product__details">
-                                            <h2><a href="product-details.html">@data.Name</a></h2>
+                                            <h2><a asp-action="Details" asp-controller="Shop" asp-route-id="@data.Id">@data.Name</a></h2>
                                             @if (data.Discount != 0)
                                             { 
                                                 <span style="color:red" class="popular__pro__prize">$@(data.SellPrice - (data.SellPrice * data.Discount) / 100)</span>

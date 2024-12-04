@@ -1,0 +1,200 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+@section style {
+<style>
+        .product__details__container {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+
+        .product__small__images {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            padding: 10px 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .product__small__images li {
+            cursor: pointer;
+        }
+
+        .product__small__images img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .product__small__images img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .product__big__images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .portfolio-full-image {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab-content img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-pane.active img {
+            display: block;
+        }
+</style>
+}
+
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(../assets/bg/2.jpg) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Product Details</h2>
+                        <nav class="bradcaump-inner">
+                            <a class="breadcrumb-item" href="index.html">Home</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb-item active">Product Details</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Product Details -->
+<section class="htc__product__details pt--120 pb--100 bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 col-sm-12">
+                <div class="product__details__container">
+                    <!-- Start Small images -->
+                    <ul class="nav product__small__images" role="tablist">
+                        @foreach (var data in Model.Images ?? [])
+                        {
+                            <li role="presentation" class="pot-small-img">
+                                <a class="active" href="#img-tab-1" role="tab" data-bs-toggle="tab">
+                                    <img width="100px" src="~/imgs/products/@data.ImageUrl" alt="small-image">
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                    <!-- End Small images -->
+                    <div class="product__big__images">
+                        <div class="portfolio-full-image tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="img-tab-1">
+                                <img width="400px" src="~/imgs/products/@Model.CoverImage" alt="full-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 col-sm-12 smt-30 xmt-30">
+                <div class="htc__product__details__inner">
+                    <div class="pro__detl__title">
+                        <h2>@Model.Name</h2>
+                    </div>
+                    <div class="pro__dtl__rating">
+                        <ul class="pro__rating">
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                        </ul>
+                        <span class="rat__qun">(Based on 0 Ratings)</span>
+                    </div>
+                    <div class="pro__details">
+                        <p>@Model.Description</p>
+                    </div>
+                    @if (@Model.Discount != 0)
+                    {
+                        <ul class="pro__dtl__prize">
+                            <li style="margin-right:8px">$@((Model.SellPrice * (100 - Model.Discount)) / 100)</li>
+                            <li class="old__prize">$@Model.SellPrice</li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="pro__dtl__prize">
+                            <li>$@Model.SellPrice</li>
+                        </ul>
+                    }
+                    <div class="product-action-wrap">
+                        <div class="prodict-statas"><span>Quantity :</span></div>
+                        <div class="product-quantity">
+                            <form id='myform' method='POST' action='#'>
+                                <div class="product-quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="pro__dtl__btn">
+                        <li class="buy__now__btn"><a href="#">buy now</a></li>
+                        <li><a href="#"><span class="ti-heart"></span></a></li>
+                        <li><a href="#"><span class="ti-email"></span></a></li>
+                    </ul>
+                    <div class="pro__social__share">
+                        <h2>Share :</h2>
+                        <ul class="pro__soaial__link">
+                            <li><a href="https://twitter.com/devitemsllc" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/devitems/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/devitems/?ref=bookmarks" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
+                            <li><a href="https://plus.google.com/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Product Details -->
+<!-- Start Product tab -->
+<section class="htc__product__details__tab bg__white pb--120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <ul class="nav product__deatils__tab mb--60" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#description" role="tab" data-bs-toggle="tab">Description</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#sheet" role="tab" data-bs-toggle="tab">Data sheet</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="active" href="#reviews" role="tab" data-bs-toggle="tab">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @await Component.InvokeAsync("ProductReviewForm")
+    </div>
+</section>
+<!-- End Product tab -->
+

@@ -11,7 +11,7 @@ using UniqloMvc.ViewModels.Products;
 namespace UniqloMvc.Areas.Admin.Controllers;
 
 [Area("Admin")]
-[Authorize(Roles = nameof(Roles.Admin))]
+[Authorize(Roles = AuthTypeCustom.AdminAndSmm)]
 public class ProductController(UniqloDbContext _context, IWebHostEnvironment _env) : Controller
 {
     public async Task<IActionResult> Index()

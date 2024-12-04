@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using UniqloMvc.Constants;
 using UniqloMvc.Enums;
 using UniqloMvc.Extensions;
 using UniqloMvc.Models;
@@ -66,7 +70,7 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Login(LoginVM vm)
+    public async Task<IActionResult> Login(LoginVM vm, string? returnUrl)
     {
         if (!ModelState.IsValid)
         {
@@ -98,7 +102,24 @@ public class AccountController : Controller
             }
             return View();
         }
+        
+        if (!returnUrl.IsNullOrEmpty())
+        { 
+            return Redirect(returnUrl!);
+        }
 
+        if (HttpContext.User?.FindFirst(ClaimTypes.Role)?.Value.ToLower() == "admin")
+        {
+            return RedirectToAction("Index", new { Controller="Dashboard", Area="Admin"});
+        }
+
+        return RedirectToAction("Index", "Home");
+    }
+
+    [Authorize(Roles = AuthTypeCustom.AdminAndSmm)]
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
     }
 }

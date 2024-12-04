@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using UniqloMvc.DataAccess;
 using UniqloMvc.Helpers;
+using UniqloMvc.Models;
 using UniqloMvc.ViewModels.Baskets;
 using UniqloMvc.ViewModels.Brands;
 using UniqloMvc.ViewModels.Commons;
@@ -72,6 +73,17 @@ namespace UniqloMvc.Controllers
                 }).ToListAsync();
 
             return View(vm);
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        { 
+            if (!id.HasValue) return BadRequest();
+            Product? product = await _context.Products
+                .Include(x => x.Images)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (product == null) return NotFound();
+            return View(product);
         }
 
         public async Task<IActionResult> AddBasket(int id)
