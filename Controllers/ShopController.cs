@@ -108,8 +108,18 @@ namespace UniqloMvc.Controllers
             ViewBag.UserEmail = user?.Email;
             ViewBag.ProductId = id.Value;
 
+            double avgRate = await _context.Reviews.Where(x => x.ProductId == id).AverageAsync(x => x.ReviewRate);
+            int countRate = await _context.Reviews.Where(x => x.ProductId == id).CountAsync();
+
+            ProductReviewVM prodRew = new ProductReviewVM
+            {
+                AvgRating = avgRate,
+                TotalRates = countRate,
+            };
+
             vm.Product = product ?? new Product();
             vm.Comments = comments;
+            vm.ProductReview = prodRew;
             return View(vm);
         }
 
