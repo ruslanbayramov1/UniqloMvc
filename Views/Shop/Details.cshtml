@@ -216,6 +216,12 @@
                             </div>
                         </div>
                         <div style="margin-bottom:96px" class="review__box">
+                        @if (!Context.User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <h1><a asp-controller="Account" asp-action="Login">Sign in</a> for review</h1>
+                        }
+                        else
+                        {
                             <form action="Comment" method="post" id="review-form">
                                 <div class="rating__wrap">
                                 <h2 class="rating-title">Write A Review</h2>
@@ -299,6 +305,7 @@
                                 <button class="btn btn-warning" asp-action="Comment" asp-controller="Shop">Submit</button>
                                 </div>
                             </form>
+                        }
                         </div>
                         <div class="review__address__inner">
                             <!-- Start Single Review -->

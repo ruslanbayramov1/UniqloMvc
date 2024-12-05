@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
@@ -124,8 +125,14 @@ namespace UniqloMvc.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Comment(CommentCreateVM vm)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(Details), new { id = vm.ProductId });
+            }
+
             string? userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);

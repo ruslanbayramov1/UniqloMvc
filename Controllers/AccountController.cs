@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
-using UniqloMvc.Constants;
 using UniqloMvc.Enums;
 using UniqloMvc.Extensions;
 using UniqloMvc.Models;
@@ -22,7 +20,12 @@ public class AccountController : Controller
     }
 
     public IActionResult Login()
-    { 
+    {
+        if (User.Identity?.IsAuthenticated ?? false)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
         return View();
     }
 
@@ -72,10 +75,16 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LoginVM vm, string? returnUrl)
     {
+        if (User.Identity?.IsAuthenticated ?? false)
+        { 
+            return RedirectToAction("Index", "Home");
+        }
+
         if (!ModelState.IsValid)
         {
             return View();
         }
+
 
         User? user = await _userManager.FindByNameAsync(vm.Username);
         if (user == null)
@@ -116,10 +125,9 @@ public class AccountController : Controller
         return RedirectToAction("Index", "Home");
     }
 
-    [Authorize(Roles = AuthTypeCustom.AdminAndSmm)]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Login", "Account");
     }
 }
