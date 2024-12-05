@@ -62,6 +62,10 @@
         .tab-pane.active img {
         display: block;
         }
+
+        .rating li span {
+            color: #f3c258;
+        }
     </style>
 }
 
@@ -283,7 +287,7 @@
                                     </div>
                                 </div>
                                 <div class="review-btn">
-                                <button class="fv-btn" asp-action="Comment" asp-controller="Shop">submit review</button>
+                                <button class="btn btn-warning" asp-action="Comment" asp-controller="Shop">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -291,7 +295,7 @@
                             <!-- Start Single Review -->
                             @foreach (var data in Model.Comments ?? [])
                             { 
-                                <div class="pro__review">
+                                <div style="margin-bottom:24px" class="pro__review">
                                     @* <div class="review__thumb">
                                         <img>
                                     </div> *@
@@ -304,7 +308,7 @@
                                                     <li><i class="zmdi zmdi-star"></i></li>
                                                 }
 
-                                                @for (int j = data.ReviewRate; j <= 5 - data.ReviewRate; j++)
+                                                @for (int j = 0; j < 5 - data.ReviewRate; j++)
                                                 {
                                                     <li><span class="ti-star"></span></li>
                                                 }
