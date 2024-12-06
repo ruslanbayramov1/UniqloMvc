@@ -117,13 +117,19 @@ public class AccountController : Controller
             return View();
         }
 
+        if (!user.EmailConfirmed)
+        {
+            ModelState.AddModelError("", "You need to confirm you email!");
+            return View();
+        }
+
         var res = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
 
         if (!res.Succeeded)
         {
             if (res.IsNotAllowed)
             {
-                ModelState.AddModelError("", "Username or password is wrong");
+                ModelState.AddModelError("", "You do not have permission");
             }
             else if (res.IsLockedOut)
             {
