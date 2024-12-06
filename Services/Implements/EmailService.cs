@@ -40,4 +40,20 @@ public class EmailService : IEmailService
 
         return Task.CompletedTask;
     }
+
+    public Task SendForgotPasswordAsync(string receiver, string userName, string token)
+    {
+        MailAddress to = new MailAddress(receiver);
+        MailMessage msg = new MailMessage(_from, to);
+
+        string url = _httpContext.Request.Scheme + "://" + _httpContext.Request.Host + "/Account/ForgotPassword" + $"?token={token}" + $"&user={userName}";
+
+        msg.Body = EmailTemplates.ForgotTemplate.Replace("__$userName", userName).Replace("__$verifyLink", url);
+        msg.Subject = "Email Confirmation";
+        msg.IsBodyHtml = true;
+
+        _smtpClient.Send(msg);
+        
+        return Task.CompletedTask; 
+    }
 }
