@@ -2,7 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UniqloMvc.DataAccess;
 using UniqloMvc.Extensions;
+using UniqloMvc.Helpers;
 using UniqloMvc.Models;
+using UniqloMvc.Services.Abstracts;
+using UniqloMvc.Services.Implements;
 
 namespace UniqloMvc
 {
@@ -20,6 +23,7 @@ namespace UniqloMvc
             });
 
             builder.Services.AddIdentity<User, IdentityRole>(opt => {
+                opt.SignIn.RequireConfirmedEmail = true;
                 opt.Password.RequiredLength = 3;
                 opt.User.RequireUniqueEmail = true;
                 opt.Password.RequireNonAlphanumeric = false;
@@ -34,6 +38,9 @@ namespace UniqloMvc
             })
                 .AddEntityFrameworkStores<UniqloDbContext>()
                 .AddDefaultTokenProviders();
+
+            builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Name));
 
             builder.Services.ConfigureApplicationCookie(opt =>
             {

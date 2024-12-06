@@ -5,6 +5,7 @@ using System.Security.Claims;
 using UniqloMvc.Enums;
 using UniqloMvc.Extensions;
 using UniqloMvc.Models;
+using UniqloMvc.Services.Abstracts;
 using UniqloMvc.ViewModels.Auths;
 
 namespace UniqloMvc.Controllers;
@@ -13,10 +14,12 @@ public class AccountController : Controller
 {
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
-    public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+    private readonly IEmailService _emailService;
+    public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IEmailService emailService)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _emailService = emailService;
     }
 
     public IActionResult Login()
@@ -32,6 +35,25 @@ public class AccountController : Controller
     public IActionResult Register()
     {
         return View();
+    }
+
+    public async Task<IActionResult> VerifyEmail(string token, string user)
+    {
+        User? userEnt = await _userManager.FindByNameAsync(user);
+        if (userEnt == null) return BadRequest();
+
+        token = token.Replace(' ', '+');
+        var res = await _userManager.ConfirmEmailAsync(userEnt, token);
+        if (!res.Succeeded)
+        {
+            foreach (var err in res.Errors)
+            {
+                ModelState.AddModelError("", err.Description);
+            }
+        }
+
+        await _signInManager.SignInAsync(userEnt, true);
+        return RedirectToAction("Index", "Home");
     }
 
     [HttpPost]
@@ -69,7 +91,9 @@ public class AccountController : Controller
             return View();
         }
 
-        return RedirectToAction(nameof(Login));
+        string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        await _emailService.SendEmailConfirmationAsync(user.Email, user.UserName, token);
+        return Content("Email sent!");
     }
 
     [HttpPost]
