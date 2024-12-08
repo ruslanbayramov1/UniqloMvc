@@ -34,6 +34,11 @@ public class AccountController : Controller
 
     public IActionResult Register()
     {
+        if (User.Identity?.IsAuthenticated ?? false)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
         return View();
     }
 

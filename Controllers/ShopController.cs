@@ -109,8 +109,14 @@ namespace UniqloMvc.Controllers
             ViewBag.UserEmail = user?.Email;
             ViewBag.ProductId = id.Value;
 
-            double avgRate = await _context.Reviews.Where(x => x.ProductId == id).AverageAsync(x => x.ReviewRate);
+
             int countRate = await _context.Reviews.Where(x => x.ProductId == id).CountAsync();
+
+            int avgRate = 0;
+            if (countRate != 0)
+            { 
+                avgRate = (int)await _context.Reviews.Where(x => x.ProductId == id).AverageAsync(x => x.ReviewRate);
+            }
 
             ProductReviewVM prodRew = new ProductReviewVM
             {
@@ -128,12 +134,18 @@ namespace UniqloMvc.Controllers
         [Authorize]
         public async Task<IActionResult> Comment(CommentCreateVM vm)
         {
+            string? userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+            {
+                return RedirectToAction(nameof(Details), new { id = vm.ProductId });
+            }
+
             if (!ModelState.IsValid)
             {
                 return RedirectToAction(nameof(Details), new { id = vm.ProductId });
             }
 
-            string? userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
             if (user == null) return BadRequest();

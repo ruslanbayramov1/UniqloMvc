@@ -41,6 +41,7 @@ namespace UniqloMvc.Extensions
                     UserName = "admin",
                     Email = "admin@gmail.com",
                 };
+                admin.EmailConfirmed = true;
 
                 await _userManager.CreateAsync(admin, "123");
                 await _userManager.AddToRoleAsync(admin, "Admin");

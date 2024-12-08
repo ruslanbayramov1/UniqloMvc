@@ -7,7 +7,6 @@ public class CommentCreateVM
     [Required]
     public int ProductId { get; set; }
     [Required]
-    public string UserId { get; set; }
     public string? Text { get; set; }
     [Required]
     [Range(1, 5)]
