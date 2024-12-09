@@ -47,7 +47,6 @@ namespace UniqloMvc
                 opt.LoginPath = "/Account/Login";
                 opt.AccessDeniedPath = "/Home/AccessDenied";
             });
-            
 
             var app = builder.Build();
 
@@ -60,6 +59,7 @@ namespace UniqloMvc
             app.UseHttpsRedirection();
             //using static files in wwwroot
             app.UseStaticFiles();
+
 
             app.UseRouting();
 

@@ -61,6 +61,91 @@ public class AccountController : Controller
         return RedirectToAction("Index", "Home");
     }
 
+    public IActionResult VerifyResetPassword()
+    {
+        string? userName = HttpContext.Request.Cookies["user"];
+        string? token = HttpContext.Request.Cookies["token"];
+        if (userName == null || token == null) return NotFound();
+
+        return View();
+    }
+
+    public IActionResult SendForgotEmail()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> VerifyResetPassword(ForgotVM vm)
+    {
+        if (!ModelState.IsValid)
+        {
+            ModelState.AddModelError("", "Passwords not matches");
+            return View();
+        }
+
+        string? userName = HttpContext.Request.Cookies["user"];
+        string? token = HttpContext.Request.Cookies["token"];
+        token = token.Replace(' ', '+');
+
+        User? user = await _userManager.FindByNameAsync(userName);
+
+        if (user == null)
+        {
+            ModelState.AddModelError("", "Something went wrong with resetting password");
+            return View();
+        };
+
+        var res = await _userManager.ResetPasswordAsync(user, token, vm.Password);
+        if (!res.Succeeded)
+        {
+            foreach (var err in res.Errors)
+            {
+                ModelState.AddModelError("", err.Description);
+            }
+            return View();
+        }
+
+        HttpContext.Response.Cookies.Delete("token");
+        HttpContext.Response.Cookies.Delete("user");
+
+        await _signInManager.SignInAsync(user, true);
+        return RedirectToAction("Index", "Home");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> SendForgotEmail(ForgotEmailVM vm)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
+        User? user = await _userManager.FindByEmailAsync(vm.Email);
+        if (user == null)
+        {
+            ModelState.AddModelError("", "Something went wrong!");
+            return View();
+        }
+
+        string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        await _emailService.SendForgotPasswordAsync(user.Email, user.UserName, token);
+        return Content("Reset password email sent!");
+    }
+
+    public IActionResult ResetPasswordData(string token, string user)
+    {
+        CookieOptions opt = new CookieOptions
+        {
+            Expires = DateTime.UtcNow + TimeSpan.FromMinutes(5),
+        };
+
+        HttpContext.Response.Cookies.Append("token", token, opt);
+        HttpContext.Response.Cookies.Append("user", user, opt);
+
+        return RedirectToAction(nameof(VerifyResetPassword));
+    }
+
     [HttpPost]
     public async Task<IActionResult> Register(RegisterVM vm)
     {

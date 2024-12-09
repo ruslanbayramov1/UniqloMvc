@@ -46,10 +46,10 @@ public class EmailService : IEmailService
         MailAddress to = new MailAddress(receiver);
         MailMessage msg = new MailMessage(_from, to);
 
-        string url = _httpContext.Request.Scheme + "://" + _httpContext.Request.Host + "/Account/ForgotPassword" + $"?token={token}" + $"&user={userName}";
+        string url = _httpContext.Request.Scheme + "://" + _httpContext.Request.Host + "/Account/ResetPasswordData" + $"?token={token}" + $"&user={userName}";
 
         msg.Body = EmailTemplates.ForgotTemplate.Replace("__$userName", userName).Replace("__$verifyLink", url);
-        msg.Subject = "Email Confirmation";
+        msg.Subject = "Reset Password";
         msg.IsBodyHtml = true;
 
         _smtpClient.Send(msg);
