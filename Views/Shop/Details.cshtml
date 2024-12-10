@@ -312,9 +312,9 @@
                             @foreach (var data in Model.Comments ?? [])
                             { 
                                 <div style="margin-bottom:24px" class="pro__review">
-                                    @* <div class="review__thumb">
-                                        <img>
-                                    </div> *@
+                                    <div class="review__thumb">
+                                        <img width="60px" class="rounded-circle" src="@data.ProfileUrl" />
+                                    </div>
                                     <div class="review__details">
                                         <div class="review__info">
                                             <h4><a href="#">@data.Fullname</a></h4>

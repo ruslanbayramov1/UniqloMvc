@@ -15,7 +15,7 @@ using UniqloMvc.ViewModels.Reviews;
 
 namespace UniqloMvc.Controllers
 {
-    public class ShopController(UniqloDbContext _context) : Controller
+    public class ShopController(UniqloDbContext _context, IHttpContextAccessor _httpAccessor) : Controller
     {
         public async Task<IActionResult> Index(string? amount, string? sortby, params int?[] SelectedBrand)
         {
@@ -90,6 +90,8 @@ namespace UniqloMvc.Controllers
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (product == null) return NotFound();
 
+            string url = _httpAccessor.HttpContext.Request.Scheme + "://" + _httpAccessor.HttpContext.Request.Host;
+
             List<CommentShowVM> comments = await _context.Reviews
                 .Include(x => x.User)
                 .Where(x => x.ProductId == id)
@@ -99,6 +101,7 @@ namespace UniqloMvc.Controllers
                     Text = x.ReviewText,
                     ReviewRate = x.ReviewRate,
                     CommentDate = x.CreatedTime,
+                    ProfileUrl = x.User.ProfileImageUrl.IsNullOrEmpty() ? "https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" : $"{url}/imgs/profiles/{x.User.ProfileImageUrl}" 
                 })
                 .ToListAsync();
 
@@ -108,7 +111,6 @@ namespace UniqloMvc.Controllers
             ViewBag.UserName = user?.UserName;
             ViewBag.UserEmail = user?.Email;
             ViewBag.ProductId = id.Value;
-
 
             int countRate = await _context.Reviews.Where(x => x.ProductId == id).CountAsync();
 
