@@ -1,4 +1,5 @@
-﻿@model List<Product>
+﻿@using UniqloMvc.ViewModels.Commons
+@model List<Product>
 @{
     ViewData["Title"] = "Product";
 }
@@ -45,6 +46,8 @@
                 </tbody>
             </table>
         </div>
+
+        <partial name="_PaginationPartial" model="@(ViewBag.Pagination as PaginationVM)"/>
     </div>
 </div>
 

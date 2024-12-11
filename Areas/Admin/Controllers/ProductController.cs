@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniqloMvc.Constants;
 using UniqloMvc.DataAccess;
-using UniqloMvc.Enums;
 using UniqloMvc.Extensions;
 using UniqloMvc.Models;
+using UniqloMvc.ViewModels.Commons;
 using UniqloMvc.ViewModels.Products;
 
 namespace UniqloMvc.Areas.Admin.Controllers;
@@ -14,14 +14,29 @@ namespace UniqloMvc.Areas.Admin.Controllers;
 [Authorize(Roles = AuthTypeCustom.AdminAndSmm)]
 public class ProductController(UniqloDbContext _context, IWebHostEnvironment _env) : Controller
 {
-    public async Task<IActionResult> Index()
-    { 
-        return View(await _context.Products.Where(prod => prod.IsDeleted == false).Include(x => x.Brand).ToListAsync());
+    public async Task<IActionResult> Index(int? current = 1, int? take = 2)
+    {
+        var query = _context.Products
+            .Where(x => !x.IsDeleted)
+            .Include(x => x.Brand)
+            .AsQueryable();
+
+        if (!take.HasValue || take.Value < 1) take = 2;
+        if (!current.HasValue || current.Value < 1) current = 1;
+        
+        decimal totalProdCount = await query.CountAsync();
+        query = query.Skip((current.Value - 1) * take.Value).Take(take.Value);
+
+        ViewBag.Pagination = new PaginationVM(current.Value, take.Value, totalProdCount);
+
+        var data = await query.ToListAsync();
+
+        return View(data);
     }
 
     public async Task<IActionResult> Create()
     {
-        ViewBag.Brands = await _context.Brands.Where(brand => brand.IsDeleted == false).ToListAsync();
+        ViewBag.Brands = await _context.Brands.Where(brand => !brand.IsDeleted).ToListAsync();
         return View();
     }
 
