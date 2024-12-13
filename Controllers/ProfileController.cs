@@ -48,7 +48,6 @@ public class ProfileController : Controller
             return RedirectToAction(nameof(Index));
         }
 
-
         string userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "";
         User? user = await _userManager.FindByIdAsync(userId);
         if (user == null) return NotFound();

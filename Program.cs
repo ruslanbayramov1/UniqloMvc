@@ -19,7 +19,7 @@ namespace UniqloMvc
 
             //IoC - Inversion of Control
             builder.Services.AddDbContext<UniqloDbContext>(opt => {
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSql"));
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("AspMonsterRemote"));
             });
 
             builder.Services.AddIdentity<User, IdentityRole>(opt => {
